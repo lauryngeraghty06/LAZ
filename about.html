@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js" defer></script>
+</head>
+
+<body>
+
+<!-- NAV BAR (Zoe’s part goes here) -->
+
+<header class="hero">
+    <div class="hero-content">
+        <h1 class="page-title">About CineTrack</h1>
+        <p class="subtitle">Your space to track, discover, and love movies.</p>
+    </div>
+</header>
+
+<section class="section">
+    <h2 class="heading">Who We Are</h2>
+    <p class="text">
+        CineTrack is built for movie lovers who want a simple, clean, and personalised space 
+        to keep track of films they've watched, loved, or can't wait to see. 
+        Our mission is to make movie tracking fun, easy, and stress-free.
+    </p>
+</section>
+
+<section class="team-section">
+    <h2 class="heading">Meet the Team</h2>
+
+    <div class="team-grid">
+        <div class="team-card">
+            <div class="pfp"></div>
+            <h3 class="name">Lauryn</h3>
+            <p class="role">Designer & Frontend</p>
+        </div>
+
+        <div class="team-card">
+            <div class="pfp"></div>
+            <h3 class="name">Zoe</h3>
+            <p class="role">Navigation & UI</p>
+        </div>
+
+        <div class="team-card">
+            <div class="pfp"></div>
+            <h3 class="name">Teammate</h3>
+            <p class="role">Backend</p>
+        </div>
+
+        <div class="team-card">
+            <div class="pfp"></div>
+            <h3 class="name">Teammate</h3>
+            <p class="role">Research</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="heading">What We Offer</h2>
+
+    <ul class="list">
+        <li>Personalised movie watchlist</li>
+        <li>Liked films page</li>
+        <li>Most anticipated releases for 2026</li>
+        <li>Progress tracking</li>
+        <li>Clean, simple, modern design</li>
+    </ul>
+</section>
+
+<!-- LOGIN POPUP -->
+<div id="loginModal" class="login">
+    <div class="login-content">
+        <span class="close" onclick="closeLogin()">&times;</span>
+
+        <h2>Welcome Back!</h2>
+
+        <form class="login-form">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+
+            <button class="main-btn">Sign In</button>
+
+            <p>
+                Don't have an account?
+                <a href="../signup/signup.html" class="link">Sign Up</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>christmas page</title>
+<link rel="stylesheet" href="christmas.css">
+<link rel="stylesheet" href="modal.css">
+</head>
+<body>
+<!--NAVBAR-->
+        <div class="nav">
+            <nav class="nav-links">
+                <header>Name</header>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="christmas.html">Christmas</a></li>
+
+                <li class="dropdown">
+                    <a href="reviews.html">Reviews</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="top10.html">Top 10</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="ratings.html">Ratings</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="watchlist.html">Personalised Watchlist</a></li>
+                <li><a href="progress.html">Progress Page</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="buttons">
+                    <button class="login">Login</button>
+                </div>
+            </nav>
+        </div>
+        <div class="hero">
+
+    <div class="content">
+        <p class="date">December 31, 2025</p>
+        <h1 class="title">CHRISTMAS MOVIE<br>PAGE</h1>
+
+        <div class="countdown">
+            <div class="time-box">
+                <span class="num" id="days">03</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="time-box">
+                <span class="num" id="hours">01</span>
+                <span class="label">hr</span>
+            </div>
+            <div class="time-box">
+                <span class="num" id="minutes">47</span>
+                <span class="label">min</span>
+            </div>
+            <div class="time-box">
+                <span class="num" id="seconds">58</span>
+                <span class="label">sec</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn dark">READ MORE</button>
+            <button class="btn light">SUBSCRIBE</button>
+        </div>
+    </div>
+
+    <div class="snow-hill"></div>
+
+</div>
+<script>
+    // Set event date (CHANGE THIS IF YOU WANT)
+    const eventDate = new Date("December 31, 2025 00:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = eventDate - now;
+
+        if (diff <= 0) {
+            document.getElementById("days").textContent = "00";
+            document.getElementById("hours").textContent = "00";
+            document.getElementById("minutes").textContent = "00";
+            document.getElementById("seconds").textContent = "00";
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("days").textContent = days.toString().padStart(2, "0");
+        document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+    }
+
+    // Update every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+
+
+<div class="slider-wrapper">
+    <div class="slider">
+        <div class="slide" onclick="showText(0)">
+            <img src="santaclause.jpeg" alt="Santa Clause">
+            <p class="slide-text">Movie 1 description goes here.</p>
+        </div>
+        <div class="slide" onclick="showText(1)">
+            <img src="elf.jpg" alt="Elf">
+            <p class="slide-text">Movie 1 description goes here.</p>
+        </div>
+        <div class="slide" onclick="showText(2)">
+            <img src="loveactually.jpg" alt="Love Actually">
+            <p class="slide-text">Movie 1 description goes here.</p>
+        </div>
+    </div>
+
+    <button class="btn prev" onclick="changeSlide(-1)">❮</button>
+    <button class="btn next" onclick="changeSlide(1)">❯</button>
+</div>
+
+<!-- Modal for text content -->
+<div class="modal" id="infoModal">
+    <div class="modal-content">
+        <span class="close">×</span>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<div id="loginModal" class="login">
+    <div class="login-content">
+        <span class="close" onclick="closeLogin()">&times;</span>
+
+        <h2>Welcome Back!</h2>
+
+        <form class="login-form">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+
+            <button class="main-btn">Sign In</button>
+
+            <p>
+                Don't have an account?
+                <a href="../signup/signup.html" class="link">Sign Up</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+
+</body>

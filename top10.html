@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>top10</title>
+<link rel="stylesheet" href="top10.css">
+</head>
+<body>
+<!--NAVBAR-->
+        <div class="nav">
+            <nav class="nav-links">
+                <header>Name</header>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="christmas.html">Christmas</a></li>
+                <li class="dropdown">
+                    <a href="reviews.html">Reviews</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="top10.html">Top 10</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="ratings.html">Ratings</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="watchlist.html">Personalised Watchlist</a></li>
+                <li><a href="progress.html">Progress Page</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="buttons">
+                    <button class="login">Login</button>
+                </div>
+            </nav>
+        </div>
+<!--MOVIE GRID-->
+<div class="title-section"><h2>Top 10 Movies of 2025</h2></div>
+<div class="movie-grid">
+    
+    <div class="movie-card" data-video="https://www.youtube.com/embed/vt98AlBDI9Y?si=wTsGPipg8a6e4lMy">
+        <img src="wicked.jpg" class="poster">
+        <h3>Wicked: For Good</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="movie-card" data-video="https://www.youtube.com/embed/-E3lMRx7HRQ?si=HNj2CQw-zjM_pjQc">
+        <img src="now you see me.jpg" class="poster">
+        <h3>Now You See Me: Now You Don't</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="movie-card" data-video="https://www.youtube.com/embed/qub8lZlVlho?si=LcPRat1ZEgs96sv5">
+        <img src="regrettingyou.jpg" class="poster">
+        <h3>Regretting You</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="movie-card" data-video="https://www.youtube.com/embed/5AwtptT8X8k?si=rxkaSjVmWa5W-ZRL">
+        <img src="zootopia.jpg" class="poster">
+        <h3>Zootopia 2</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+   
+     <div class="movie-card" data-video="https://www.youtube.com/embed/bMgfsdYoEEo?si=waWH6sSsycBCBxBf">
+        <img src="conjuring.jpg" class="poster">
+        <h3>The Conjuring: Last Rites</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+</div>
+<div class="title-section"><h2>Top 10 Series of 2025</h2></div>
+<div class="series-grid">
+    <div class="series-card" data-video= "https://www.youtube.com/embed/PssKpzB0Ah0?si=TaseUMwAA0GHlZ4_">
+        <img src="strangerthings.jpg" class="poster">
+        <h3>Stranger Things S5</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="series-card" data-video="https://www.youtube.com/embed/uoMLuX42pCk?si=gqT6wXubn0FQMbpT">
+        <img src="wewereliars.jpg" class="poster">
+        <h3>We Were Liars S2</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="series-card" data-video="https://www.youtube.com/embed/_UXKlYvLGJY?si=0F5LFocT64nijj1B">
+        <img src="severance.jpg" class="poster">
+        <h3>Severance S2</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="series-card" data-video= "https://www.youtube.com/embed/Wk5OxqtpBR4?si=NVWNE5IdLCXud_dU" >
+        <img src="adolescence.jpg" class="poster">
+        <h3>Adolescence</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+    <div class="series-card" data-video="https://www.youtube.com/embed/2mH396WCN0U?si=rW3EzJFEd80Aq4_g" >
+        <img src="houseofguiness.png" class="poster">
+        <h3>House of Guinness</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal" id="trailerModal">
+    <div class="modal-content">
+        <span class="close">×</span>
+
+        <!-- single iframe (removed multiple src attributes) -->
+        <iframe 
+            width = "800" height = "450"
+            id="trailerFrame"
+            src=""
+            title="YouTube video player" 
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('trailerModal');
+    const iframe = document.getElementById('trailerFrame');
+    const closeBtn = document.querySelector('.close');
+    
+    document.querySelectorAll('.movie-card, .series-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const trailerSrc = card.getAttribute('data-video');
+            if (!trailerSrc) return;
+            // append autoplay to the existing url querystring
+            iframe.src = trailerSrc + (trailerSrc.includes('?') ? '&autoplay=1' : '?autoplay=1');
+            modal.style.display = 'flex';
+        });
+    });
+ closeBtn.onclick = () => {
+        modal.style.display = 'none';
+        iframe.src = "";
+    };
+
+    modal.onclick = (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            iframe.src = "";
+        }
+    };
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+            iframe.src = "";
+        }
+    });
+
+ 
+</script>
+<div id="loginModal" class="login">
+    <div class="login-content">
+        <span class="close" onclick="closeLogin()">&times;</span>
+
+        <h2>Welcome Back!</h2>
+
+        <form class="login-form">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+
+            <button class="main-btn">Sign In</button>
+
+            <p>
+                Don't have an account?
+                <a href="../signup/signup.html" class="link">Sign Up</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

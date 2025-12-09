@@ -1,0 +1,96 @@
+/* COLOURS */
+:root {
+    --red: #6B0F1A;
+    --pink: #A87D8B;
+    --dark: #040234; /* only for nav bar (Zoe handles it) */
+    --light: #EEF1EF;
+    --brown: #301501;
+    --radius: 12px;
+}
+
+/* GLOBAL */
+body {
+    background: var(--light);
+    font-family: 'Open Sans', sans-serif;
+    color: var(--brown);
+    margin: 0;
+}
+
+/* HEADINGS */
+.title {
+    font-family: 'Northlima', serif;
+    font-size: 60px;
+}
+
+/* TEXT + FORM FONTS */
+p, label, input {
+    font-size: 36px;
+}
+
+/* SPACING */
+section {
+    margin: 110px auto;
+}
+p {
+    margin-bottom: 25px;
+}
+input {
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.main-btn {
+    padding: 18px 34px;
+    border-radius: var(--radius);
+    background: var(--red);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* LINKS */
+.link {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+/* FORM WRAPPER */
+.form-wrapper {
+    width: 55%;
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: var(--radius);
+    border: 2px solid var(--pink);
+}
+
+/* MODAL (SIGN IN POPUP) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    width: 40%;
+    margin: 120px auto;
+    padding: 40px;
+    border-radius: var(--radius);
+}
+
+.close {
+    float: right;
+    font-size: 40px;
+    cursor: pointer;
+}
