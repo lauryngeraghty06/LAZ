@@ -1,0 +1,106 @@
+:root {
+    --red: #6B0F1A;
+    --pink: #A87D8B;
+    --dark: #040234;
+    --light: #EEF1EF;
+    --brown: #301501;
+    --radius: 12px;
+}
+
+/* PAGE BASE */
+body {
+    background: var(--light);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    color: var(--brown);
+}
+
+.page-title {
+    font-family: 'Northlima', serif;
+    font-size: 60px;
+}
+
+.heading {
+    font-family: 'Northlima', serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.text, p, li {
+    font-size: 36px;
+}
+
+/* HERO */
+.hero {
+    background: var(--pink);
+    padding: 120px 40px;
+    text-align: center;
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.subtitle {
+    margin-top: 20px;
+}
+
+/* SECTIONS */
+.section {
+    width: 70%;
+    margin: 120px auto;
+}
+
+/* TEAM GRID */
+.team-section {
+    margin: 120px auto;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 40px;
+}
+
+.team-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pfp {
+    width: 140px;
+    height: 140px;
+    background: var(--pink);
+    border-radius: 50%;
+    margin: auto;
+}
+
+.name {
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+.role {
+    font-size: 30px;
+    color: var(--pink);
+}
+
+/* LIST */
+.list li {
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.main-btn {
+    padding: 18px 34px;
+    background: var(--red);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.link {
+    color: var(--red);
+}

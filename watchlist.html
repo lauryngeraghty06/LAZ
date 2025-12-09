@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist</title>
+
+    <link rel="stylesheet" href="watchlist.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js" defer></script>
+</head>
+
+<body>
+
+<!-- NAV BAR (Zoe adds here) -->
+
+<header class="header">
+    <h1 class="title">Your Watchlist</h1>
+    <p class="subtitle">All your saved and liked movies in one place.</p>
+</header>
+
+<section class="grid-section">
+
+    <div class="movie-card">
+        <div class="poster"></div>
+        <h3 class="movie-title">Example Movie</h3>
+        <button class="remove-btn">Remove</button>
+    </div>
+
+    <div class="movie-card">
+        <div class="poster"></div>
+        <h3 class="movie-title">Another Film</h3>
+        <button class="remove-btn">Remove</button>
+    </div>
+
+    <div class="movie-card">
+        <div class="poster"></div>
+        <h3 class="movie-title">Film Title</h3>
+        <button class="remove-btn">Remove</button>
+    </div>
+
+</section>
+<div id="loginModal" class="login">
+    <div class="login-content">
+        <span class="close" onclick="closeLogin()">&times;</span>
+
+        <h2>Welcome Back!</h2>
+
+        <form class="login-form">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+
+            <button class="main-btn">Sign In</button>
+
+            <p>
+                Don't have an account?
+                <a href="../signup/signup.html" class="link">Sign Up</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

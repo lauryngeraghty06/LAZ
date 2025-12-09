@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Progress</title>
+
+    <link rel="stylesheet" href="progress.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="title">Your Movie Progress</h1>
+    <p class="subtitle">Track how many films you’ve watched this year.</p>
+</header>
+
+<section class="stats">
+
+    <div class="stat-card">
+        <h3 class="stat-number">34</h3>
+        <p class="stat-label">Movies Watched</p>
+    </div>
+
+    <a href="watchlist.html" class="stat-card clickable">
+        <h3 class="stat-number">12</h3>
+        <p class="stat-label">Movies Liked</p>
+    </a>
+
+</section>
+
+
+
+<section class="progress-bars">
+
+    <div class="bar-group">
+        <p class="bar-title">2026 Watch Goal</p>
+        <div class="bar-outline">
+            <div class="bar-fill" style="width: 45%;"></div>
+        </div>
+    </div>
+
+    <div class="bar-group">
+        <p class="bar-title">Genres Explored</p>
+        <div class="bar-outline">
+            <div class="bar-fill" style="width: 70%;"></div>
+        </div>
+    </div>
+
+</section>
+
+<div id="loginModal" class="login">
+    <div class="login-content">
+        <span class="close" onclick="closeLogin()">&times;</span>
+
+        <h2>Welcome Back!</h2>
+
+        <form class="login-form">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+
+            <button class="main-btn">Sign In</button>
+
+            <p>
+                Don't have an account?
+                <a href="../signup/signup.html" class="link">Sign Up</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* Basic Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body Styling */
+.body {
+    font-family: opensans, sans-serif;
+    background: #eef1ef;
+}
+.header {
+    height: 100vh;
+    width: 100vw;
+}
+/* Header */
+.header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+}
+ /* NAVBAR CONTAINER */
+.nav {
+    width: 100%;
+    padding: 1rem 5%;
+    background: #040234;
+    border-bottom: 2px solid #A87D8B;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* NAV WRAPPER */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #EEF1EF;
+    position: relative;
+}
+/* LOGO */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #EEF1EF;
+    text-shadow: 0 0 10px #A87D8B;
+}
+/* HORIZONTAL MENU */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #EEF1EF;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+/* TEXT GLOW HOVER */
+.nav-links li a:hover {
+    text-shadow: 0 0 6px #EEF1EF, 0 0 12px #A87D8B;
+}
+/* DROPDOWN ARROW */
+.dropdown > a::after {
+    content: " ▾";
+    font-size: 0.8rem;
+    margin-left: 5px;
+    transition: transform .25s ease;
+}
+.dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+/* DROPDOWN MENU STYLING */
+.dropdown {
+    position: static;
+}
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    right: 0;
+    background: #040234;
+    border: 1px solid #A87D8B;
+    border-radius: 6px;
+    padding: 0.6rem 0;
+    width: auto;
+    min-width: unset;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.25s ease;
+    box-shadow: 0 0 15px rgba(168, 125, 139, 0.3);
+    z-index: 1000;
+}
+.dropdown-menu li {
+    width: 100%;
+}
+.dropdown-menu li a {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+/* glow on hover inside dropdown */
+.dropdown-menu li a:hover {
+    background: rgba(168, 125, 139, 0.2);
+    text-shadow: 0 0 8px #EEF1EF;
+}
+/* SHOW MENU ON HOVER */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auato;
+}
+/* LOGIN BUTTON */
+.login {
+    padding: 0.5rem 1.2rem;
+    background: #A87D8B;
+    border: none;
+    border-radius: 6px;
+    color: #040234;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.login:hover {
+    background: #d1acb8;
+    box-shadow: 0 0 10px #A87D8B;
+}
