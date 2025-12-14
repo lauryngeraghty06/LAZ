@@ -1,0 +1,219 @@
+/* ================= RESET & GLOBAL ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EEF1EF ;
+    color: #EEF1EF;
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a0f3d;
+}
+
+.navbar a {
+    color: #EEF1EF;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    color: #FF4C4C;
+}
+
+.navbar button {
+    background-color: #FF4C4C;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: #EEF1EF;
+    cursor: pointer;
+}
+
+/* ================= HEADER ================= */
+.anticipated-header {
+    text-align: center;
+    padding: 60px 20px 30px 20px;
+}
+
+.anticipated-header h1 {
+    font-family: 'Northlima', sans-serif;
+    font-size: 48px;
+    color: #FF4C4C;
+    margin-bottom: 10px;
+}
+
+.anticipated-header p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ================= TOP FEATURED ================= */
+.top-anticipated {
+    padding: 20px;
+}
+
+.top-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF4C4C;
+    margin-bottom: 10px;
+}
+
+.top-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-grid .anticipated-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+/* ================= FILTER ================= */
+.filter-section {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.filter-section select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+/* ================= ANTICIPATED GRID ================= */
+.anticipated-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0 20px 40px 20px;
+}
+
+.anticipated-card {
+    background-color: #6B0F1A  ;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anticipated-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(255,76,76,0.4);
+}
+
+.anticipated-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.anticipated-card h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.anticipated-card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.release-date {
+    font-style: italic;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.btn-watchlist {
+    background-color: #040234;
+    color: #EEF1EF;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-watchlist:hover {
+    transform: scale(1.05);
+    background-color: #FF4C4C;
+}
+
+/* ================= GO TO WATCHLIST ================= */
+.go-watchlist {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.btn-explore {
+    background-color: #6B0F1A;
+    color: #EEF1EF;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-explore:hover {
+    transform: scale(1.05);
+    background-color: #FF4C4C;
+}
+
+.go-watchlist {
+    text-align: center;
+    margin: 60px 20px;
+    background-color: #040234;
+    padding: 40px 20px;
+    border-radius: 12px;
+    color: #EEF1EF;
+}
+
+.go-watchlist p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #EEF1EF;
+}
+
+.go-watchlist .btn-explore {
+    background-color: #6B0F1A;
+    color: #EEF1EF;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.go-watchlist .btn-explore:hover {
+    transform: scale(1.05);
+    background-color: #FF4C4C;
+}
+
+
+/* ================= MEDIA QUERIES ================= */
+@media(max-width:768px){
+    .top-grid { flex-direction: column; align-items: center; }
+    .anticipated-grid { grid-template-columns: 1fr; }
+}
+
+  

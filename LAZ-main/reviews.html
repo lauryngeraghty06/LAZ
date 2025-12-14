@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Write a Review</title>
+
+  <link rel="stylesheet" href="reviews.css">
+  <link rel="stylesheet" href="zoestyles.css">
+  <script src="login2.js" defer></script>
+  <script src="reviews.js" defer></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-wrapper">
+    
+        <!-- HAMBURGER (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <div class="logo">CineTracker</div>
+        <!-- MAIN LINKS -->
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="dropdown">
+                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+                <ul class="dropdown-menu">
+                    <li><a href="christmas.html">Christmas</a></li>
+                    <li><a href="top10.html">Top 10</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="anticipated.html>">Most Anticipated</a></li>
+                    <li><a href="progress.html">Continue Watching</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+         <!-- LOGIN BUTTON (mobile inside menu) -->
+            <li class="mobile-login">
+              <button class="loginbtn">Login</button>
+            </li>
+        </ul>
+
+        <!-- LOGIN BUTTON (desktop only) -->
+        <button class="loginbtn desktop-login">Login</button>
+        </div>
+        </nav>
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("open");
+}
+
+function toggleDropdown(event) {
+    // prevents navigating away
+    event.preventDefault();  
+    event.target.parentElement.classList.toggle("open-dropdown");
+}
+</script>
+<!--NAVBAR ENDING-->
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="close-auth" id="closeAuth">&times;</button>
+  
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue tracking your movies.</p>
+  
+      <input type="email" placeholder="Email address">
+      <input type="password" placeholder="Password">
+  
+      <button class="btn-login">Log In</button>
+  
+      <p class="auth-footer">
+        Don’t have an account?
+        <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("open");
+    }
+
+    function toggleDropdown(event) {
+      event.preventDefault();
+      event.target.parentElement.classList.toggle("open-dropdown");
+    }
+  </script>
+  <!-- NAVBAR END -->
+
+  <!-- REVIEWS SECTION -->
+   <section id="reviews" class="reviews-section">
+
+    <div class="feedback-card">
+      <h2>What are you reviewing?</h2>
+
+      <div class="feedback-form">
+        <input
+          type="text"
+          class="movie-title"
+          placeholder="Movie/Show title..."
+        />
+
+        <textarea placeholder="Write a review..."></textarea>
+
+        <div class="stars">
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+
+        <button class="submit-btn" id="submitBtn">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-content">
+        <h3>Thank You!</h3>
+        <p>We much appreciate your review!</p>
+        <br>
+        <a href="blogs.html" class="submit-btn">Exit</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- JS -->
+  <script src="reviews.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>CineTracker</h3>
+        <p>Your place to discover, review, and track movies you love.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="christmas.html">Christmas</a></li>
+          <li><a href="top10.html">Top 10</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="watchlist.html">Watchlist</a></li>
+          <li><a href="progress.html">Continue Watching</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="#" class="loginbtn">Log In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 CineTracker. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>christmas page</title>
+<link rel="stylesheet" href="christmas.css"> 
+<link rel="stylesheet" href="zoestyles.css">
+<script src="login2.js" defer></script>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-wrapper">
+    
+        <!-- HAMBURGER (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <div class="logo">CineTracker</div>
+        <!-- MAIN LINKS -->
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="dropdown">
+                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+                <ul class="dropdown-menu">
+                    <li><a href="christmas.html">Christmas</a></li>
+                    <li><a href="top10.html">Top 10</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="anticipated.html>">Most Anticipated</a></li>
+                    <li><a href="progress.html">Continue Watching</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+         <!-- LOGIN BUTTON (mobile inside menu) -->
+            <li class="mobile-login">
+              <button class="loginbtn">Login</button>
+            </li>
+        </ul>
+
+        <!-- LOGIN BUTTON (desktop only) -->
+        <button class="loginbtn desktop-login">Login</button>
+        </div>
+        </nav>
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("open");
+}
+
+function toggleDropdown(event) {
+    // prevents navigating away
+    event.preventDefault();  
+    event.target.parentElement.classList.toggle("open-dropdown");
+}
+</script>
+<!--NAVBAR ENDING-->
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="close-auth" id="closeAuth">&times;</button>
+  
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue tracking your movies.</p>
+  
+      <input type="email" placeholder="Email address">
+      <input type="password" placeholder="Password">
+  
+      <button class="btn-login">Log In</button>
+  
+      <p class="auth-footer">
+        Don’t have an account?
+        <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
+  </div>
+    
+<div class="hero">
+
+
+    <div class="content">
+        <p class="date">December 31, 2025</p>
+        <h1 class="title">CHRISTMAS MOVIE<br>PAGE</h1>
+
+
+        <div class="countdown">
+            <div class="time-box">
+                <span class="num" id="days">03</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="time-box">
+                <span class="num" id="hours">01</span>
+                <span class="label">hr</span>
+            </div>
+            <div class="time-box">
+                <span class="num" id="minutes">47</span>
+                <span class="label">min</span>
+            </div>
+            <div class="time-box">
+                <span class="num" id="seconds">58</span>
+                <span class="label">sec</span>
+            </div>
+        </div>
+
+
+        <div class="buttons">
+           <a href="christmas.html" class="btn dark">READ MORE</a>
+           <a href="signup.html" class="btn light">SUBSCRIBE</a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Set event date (CHANGE THIS IF YOU WANT)
+    const eventDate = new Date("December 31, 2025 00:00:00").getTime();
+
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = eventDate - now;
+
+
+        if (diff <= 0) {
+            document.getElementById("days").textContent = "00";
+            document.getElementById("hours").textContent = "00";
+            document.getElementById("minutes").textContent = "00";
+            document.getElementById("seconds").textContent = "00";
+            return;
+        }
+
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+
+        document.getElementById("days").textContent = days.toString().padStart(2, "0");
+        document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+    }
+
+
+    // Update every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+<header> Top Christmas Movies </header>
+<div class="carousel">
+    <div class="group">
+        <div class="card"> 
+            <a href="#santaclause">
+                <img src="images/santaclause.jpeg" alt="Santa Clause">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="#elf">
+                <img src="images/elf.jpg" alt="Elf">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="#loveactually">
+                <img src="images/loveactually.jpg" alt="Love Actually">
+            </a>
+        </div>
+        <div class="card">
+            <a href="#thegrinch">
+                <img src="images/thegrinch.jpg" alt="The Grinch">
+            </a>
+        </div>
+
+         <div class="card">
+            <a href="#chronicles">
+                <img src="images/christmaschronicles.jpg" alt="christmas Chronicles">
+            </a>
+        </div>
+    </div>
+    <div aria-hidden class="group">
+        <div class="card"> 
+            <a href="#santaclause">
+                <img src="images/santaclause.jpeg" alt="Santa Clause">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="#elf">
+                <img src="images/elf.jpg" alt="Elf">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="#loveactually">
+                <img src="images/loveactually.jpg" alt="Love Actually">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="#thegrinch">
+                <img src="images/thegrinch.jpg" alt="The Grinch">
+            </a>
+        </div>
+
+         <div class="card">
+            <a href="#chronicles">
+                <img src="images/christmaschronicles.jpg" alt="christmas Chronicles">
+            </a>
+        </div>
+    </div>
+</div>
+
+<section id="santaclause" class="movie-section">
+  <h2>🎅 The Santa Clause (1994)</h2>
+
+  <ul class="movie-meta">
+    <li>⭐ Rating: 6.5 / 10</li>
+    <li>⏱ Runtime: 97 minutes</li>
+    <li>📺 Streaming: Disney+</li>
+  </ul>
+
+  <p>
+    The Santa Clause is a family Christmas comedy that follows Scott Calvin,
+    an ordinary man who unexpectedly becomes Santa Claus after a magical accident.
+    As he learns to embrace his new role, the film explores belief, family,
+    and the true magic of Christmas.
+  </p>
+
+  <h4>🎭 Key Actors</h4>
+  <p>Tim Allen, Judge Reinhold, Wendy Crewson, Eric Lloyd</p>
+</section>
+
+
+<section id="elf" class="movie-section">
+  <h2>🧝 Elf (2003)</h2>
+
+  <ul class="movie-meta">
+    <li>⭐ Rating: 7.1 / 10</li>
+    <li>⏱ Runtime: 97 minutes</li>
+    <li>📺 Streaming: Netflix / Max</li>
+  </ul>
+
+  <p>
+    Elf tells the story of Buddy, a human raised by elves at the North Pole.
+    When he travels to New York City to find his real father, his joyful
+    Christmas spirit brings laughter and warmth to everyone he meets.
+  </p>
+
+  <h4>🎭 Key Actors</h4>
+  <p>Will Ferrell, Zooey Deschanel, James Caan, Bob Newhart</p>
+</section>
+
+
+<section id="loveactually" class="movie-section">
+  <h2>❤️ Love Actually (2003)</h2>
+
+  <ul class="movie-meta">
+    <li>⭐ Rating: 7.6 / 10</li>
+    <li>⏱ Runtime: 135 minutes</li>
+    <li>📺 Streaming: Prime Video</li>
+  </ul>
+
+  <p>
+    Love Actually weaves together multiple romantic stories set in London
+    during the Christmas season. The film explores love in many forms,
+    from friendship to heartbreak, all wrapped in festive charm.
+  </p>
+
+  <h4>🎭 Key Actors</h4>
+  <p>Hugh Grant, Emma Thompson, Colin Firth, Keira Knightley, Alan Rickman</p>
+</section>
+
+
+<section id="thegrinch" class="movie-section">
+  <h2>💚 How the Grinch Stole Christmas (2000)</h2>
+
+  <ul class="movie-meta">
+    <li>⭐ Rating: 6.3 / 10</li>
+    <li>⏱ Runtime: 104 minutes</li>
+    <li>📺 Streaming: Peacock</li>
+  </ul>
+
+  <p>
+    This live-action adaptation follows the Grinch as he attempts to ruin
+    Christmas for the joyful residents of Whoville. Through humor and heart,
+    the film reminds us that Christmas is about kindness and community.
+  </p>
+
+  <h4>🎭 Key Actors</h4>
+  <p>Jim Carrey, Taylor Momsen, Jeffrey Tambor, Christine Baranski</p>
+</section>
+
+
+<section id="chronicles" class="movie-section">
+  <h2>🛷 The Christmas Chronicles (2018)</h2>
+
+  <ul class="movie-meta">
+    <li>⭐ Rating: 7.0 / 10</li>
+    <li>⏱ Runtime: 104 minutes</li>
+    <li>📺 Streaming: Netflix</li>
+  </ul>
+
+  <p>
+    A modern Christmas adventure where two siblings team up with Santa Claus
+    to save Christmas after accidentally crashing his sleigh. The film
+    delivers action, humor, and festive fun.
+  </p>
+
+  <h4>🎭 Key Actors</h4>
+  <p>Kurt Russell, Goldie Hawn, Darby Camp, Judah Lewis</p>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-col">
+      <h3>CineTracker</h3>
+      <p>Your place to discover, review, and track movies you love.</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Discover -->
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="christmas.html">Christmas</a></li>
+        <li><a href="top10.html">Top 10</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="watchlist.html">Watchlist</a></li>
+        <li><a href="progress.html">Continue Watching</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#" class="loginbtn">Log In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 CineTracker. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* ================= RESET ================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f7;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: #6B0F1A ;
+  }
+  
+  /* ================= WATCHLIST PAGE ================= */
+  .watchlist-page {
+    padding: 80px 20px;
+    min-height: 100vh;
+  }
+  
+  .watchlist-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .watchlist-header h1 {
+    font-family: 'Northlima', sans-serif;
+    font-size: 60px;
+    color: #FF4C4C;
+    margin-bottom: 20px;
+  }
+  
+  .watchlist-header p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* ================= FILTER BUTTONS ================= */
+  .watchlist-filters {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .watchlist-filters button {
+    background-color: #6B0F1A;
+    color: #EEF1EF;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .watchlist-filters button:hover {
+    transform: scale(1.05);
+    background-color: #FF4C4C;
+  }
+  
+  /* ================= SHARE SECTION ================= */
+  .share-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .share-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .share-icon:hover {
+    transform: scale(1.2);
+    color: #FF4C4C;
+  }
+  
+  /* ================= WATCHLIST GRID ================= */
+  .watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+  }
+  
+  /* ================= WATCHLIST CARD ================= */
+  .watchlist-card {
+    background-color: #A87D8B;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .watchlist-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(255,76,76,0.4);
+  }
+  
+  .watchlist-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  
+  /* ================= PROGRESS BARS ================= */
+  .progress-container {
+    background-color: #3D1F3C;
+    border-radius: 12px;
+    height: 8px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    width: 0%;
+    border-radius: 12px;
+    background-color: #FF4C4C;
+    transition: width 1s ease-in-out, background-color 0.5s ease;
+  }
+  
+  .progress-number {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* ================= WATCHLIST ACTIONS ================= */
+  .watchlist-actions button {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    background-color: #040234;
+    color: #EEF1EF;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .watchlist-actions button:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn-like.active {
+    color: #FF4C4C;
+  }
+  
+  .btn-remove:hover {
+    background-color: #FF4C4C;
+  }
+  
+  /* ================= END SECTION ================= */
+  .watchlist-end {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .watchlist-end h2 {
+    font-size: 36px;
+    color: #FF4C4C;
+    margin-bottom: 20px;
+  }
+  
+  .watchlist-end p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-explore {
+    background-color: #6B0F1A;
+    color: #EEF1EF;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .btn-explore:hover {
+    transform: scale(1.05);
+    background-color: #FF4C4C;
+  }
+  
+  
+  /* ================= MEDIA QUERIES ================= */
+  @media(max-width:768px){
+    .watchlist-grid { grid-template-columns: 1fr; }
+    .progress-number { font-size: 12px; top:-20px; }
+  }
+
+/* Genre Tags */
+.genre-tag {
+    display: inline-block;
+    background-color: #FF4C4C;
+    color: #FFF;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Filter Buttons */
+  .watchlist-filters {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .watchlist-filters button {
+    margin: 0 8px;
+    padding: 8px 15px;
+    background-color: #6B0F1A;
+    color: #EEF1EF;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .watchlist-filters button:hover,
+  .watchlist-filters button.active {
+    background-color: #FF4C4C;
+  }
+  
+  /* Share Section */
+  .share-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .share-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .share-icon:hover {
+    transform: scale(1.3);
+  }
+  

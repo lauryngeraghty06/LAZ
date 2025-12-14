@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Our Project</title>
+<link rel="stylesheet" href="zoestyles.css">
+<link rel="stylesheet" href="about.css">
+<script src="about.js" defer></script>
+<script src="login2.js" defer></script>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-wrapper">
+    
+        <!-- HAMBURGER (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+        </div>
+        <div class="logo">CineTracker</div>
+        <!-- MAIN LINKS -->
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="dropdown">
+                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+                <ul class="dropdown-menu">
+                    <li><a href="christmas.html">Christmas</a></li>
+                    <li><a href="top10.html">Top 10</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="anticipated.html>">Most Anticipated</a></li>
+                    <li><a href="progress.html">Continue Watching</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+         <!-- LOGIN BUTTON (mobile inside menu) -->
+            <li class="mobile-login">
+                <button class="loginbtn">Login</button>
+            </li>
+        </ul>
+
+        <!-- LOGIN BUTTON (desktop only) -->
+        <button class="loginbtn desktop-login">Login</button>
+        </div>
+
+        </nav>
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("open");
+}
+
+function toggleDropdown(event) {
+    // prevents navigating away
+    event.preventDefault();  
+    event.target.parentElement.classList.toggle("open-dropdown");
+}
+</script>
+<!--NAVBAR ENDING-->
+
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="close-auth" id="closeAuth">&times;</button>
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue tracking your movies.</p>
+      <input type="email" placeholder="Email address" required>
+      <input type="password" placeholder="Password" required>
+      <button class="btn-login">Log In</button>
+      <p class="auth-footer">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+<!-- ABOUT PAGE -->
+<section class="about-page">
+
+  <!-- INTRO -->
+  <div class="about-intro">
+    <h1>Welcome to CineTracker!</h1>
+    <p>This website helps you track, review, and anticipate movies and TV shows. Keep your personal watchlist updated, see what's coming next, and rate your favorites.</p>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features-section">
+    <h2>Features at a Glance</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Interactive Gallery</h3>
+        <p>Hover over movie posters to see genres and ratings. Click to watch trailers of the top 10 picks.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Personalised Watchlist</h3>
+        <p>Add movies and shows to your watchlist, mark progress, and track what you've seen or loved.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Ratings & Reviews</h3>
+        <p>Give your ratings and reviews as you watch movies or TV shows, and see overall scores from the community.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Most Anticipated 2026</h3>
+        <p>Discover upcoming releases for 2026 and add them directly to your watchlist with one click.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Progress Tracker</h3>
+        <p>Track how far you are into movies or series, and write mini-reviews as you watch.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-interactive">
+      <h3></h3>
+      <p></p>
+      <div class="team-dots">
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-col">
+      <h3>CineTracker</h3>
+      <p>Your place to discover, review, and track movies you love.</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Discover -->
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="christmas.html">Christmas</a></li>
+        <li><a href="top10.html">Top 10</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="watchlist.html">Watchlist</a></li>
+        <li><a href="progress.html">Continue Watching</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#" class="loginbtn">Log In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 CineTracker. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* ================= BODY ================= */
+body.signup-page {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f4f3; /* Dark coffee brown */
+    background-image: url("backgroundred.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #EEF1EF;
+}
+
+/* ================= SIGN-UP CARD ================= */
+.signup-card {
+    background-color: rgba(48,21,1,0.95);
+    padding: 60px 50px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    margin: 100px auto;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+/* Header inside card */
+.signup-header {
+    margin-bottom: 30px;
+}
+
+.signup-header .signup-year {
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+    color: #A87D8B;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+.signup-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.signup-header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.signup-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    background-color: #EEF1EF;
+    color: #301501;
+}
+
+/* Buttons */
+.signup-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    background-color: #6B0F1A;
+    color: #EEF1EF;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.signup-button:hover {
+    transform: scale(1.05);
+    background-color: #A87D8B;
+}
+
+/* Login link */
+.signup-login-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-login-link a {
+    color: #A87D8B;
+    text-decoration: underline;
+}
+

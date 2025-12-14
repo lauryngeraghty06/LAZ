@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>contact page</title>
+<link rel="stylesheet" href="contact.css"> 
+<link rel="stylesheet" href="zoestyles.css">
+<script src="login2.js" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <body>
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-wrapper">
+    
+        <!-- HAMBURGER (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <div class="logo">CineTracker</div>
+        <!-- MAIN LINKS -->
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="dropdown">
+                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+                <ul class="dropdown-menu">
+                    <li><a href="christmas.html">Christmas</a></li>
+                    <li><a href="top10.html">Top 10</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="anticipated.html>">Most Anticipated</a></li>
+                    <li><a href="progress.html">Continue Watching</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+         <!-- LOGIN BUTTON (mobile inside menu) -->
+            <li class="mobile-login">
+              <button class="loginbtn">Login</button>
+            </li>
+        </ul>
+
+        <!-- LOGIN BUTTON (desktop only) -->
+        <button class="loginbtn desktop-login">Login</button>
+        </div>
+        </nav>
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("open");
+}
+
+function toggleDropdown(event) {
+    // prevents navigating away
+    event.preventDefault();  
+    event.target.parentElement.classList.toggle("open-dropdown");
+}
+</script>
+<!--NAVBAR ENDING-->
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="close-auth" id="closeAuth">&times;</button>
+  
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue tracking your movies.</p>
+  
+      <input type="email" placeholder="Email address">
+      <input type="password" placeholder="Password">
+  
+      <button class="btn-login">Log In</button>
+  
+      <p class="auth-footer">
+        Don’t have an account?
+        <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+<section>
+    <h4 class="sectionHeader"> Contact Us</h4>
+    <h1 class="heading">Get In Touch!</h1>
+
+    <div class="contactForm">
+        <form action="#"
+            </h1> class="sub-heading">Need Support!</h1>
+            <p class="para para2">
+             Fill out the form below to get in touch with our support team.
+            </p>
+        
+            <input type="text" class="input" placeholder="Your name">
+            <input type="text" class="input" placeholder="Your email">
+            <input type="text" class="input" placeholder="Your subject">
+            <textarea class="input" cols="30" rows="5"></textarea>
+            <input type="submit" class="input submit" value="Send Message">
+        </form>
+
+        <div
+            class="map-container">
+            <div class="mapBg"></div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.6488762098575!2d-6.2588403!3d53.385331699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e1b2f9d5d03%3A0x12bb45984107c2a8!2sDublin%20City%20University!5e0!3m2!1sen!2sie!4v1765585342276!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="contactMethod">
+        <div class="method">
+            <article class="text">
+                <i class="fa-solid fa-location-dot contactIcon"></i>
+                <h1 class="sub-heading"> Location</h1>
+                <p class="para">Collins Ave Ext, Whitehall, Dublin 9</p>
+            </article>
+        </div>
+        <div class="method">
+            <article class="text">
+               <i class="fa-solid fa-envelope contactIcon"></i>
+                <h1 class="sub-heading">Email</h1>
+                <p class="para">dcuschoolofcomputing@dcu.ie</p>
+            </article>
+        </div>
+        <div class="method">
+            <article class="text">
+               <i class="fa-solid fa-phone contactIcon"></i>
+                <h1 class="sub-heading">Phone</h1>
+                <p class="para">mobile: +353 86 879 7890</p>
+            </article>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-col">
+      <h3>CineTracker</h3>
+      <p>Your place to discover, review, and track movies you love.</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Discover -->
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="christmas.html">Christmas</a></li>
+        <li><a href="top10.html">Top 10</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="watchlist.html">Watchlist</a></li>
+        <li><a href="progress.html">Continue Watching</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#" class="loginbtn">Log In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 CineTracker. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+
+</html>
+

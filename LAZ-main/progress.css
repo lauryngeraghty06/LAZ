@@ -1,0 +1,212 @@
+/* progress.css */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EEF1EF;
+    color: #301501;
+  }
+  
+  h1 {
+    font-family: 'Northlima', sans-serif;
+    font-size: 60px;
+    color: #6B0F1A;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 36px;
+    color: #040234;
+    margin: 10px 0;
+  }
+  
+  h3,
+  h4 {
+    margin: 8px 0;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    color: #A87D8B;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ================= Progress Page ================= */
+  
+  .progress-page {
+    padding: 50px 20px;
+  }
+  
+  .progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+  }
+  
+  /* ================= Progress Card ================= */
+  
+  .progress-card {
+    background-color: #A87D8B;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .progress-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .progress-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  
+  /* ================= Progress Bar ================= */
+  
+  .progress-bar-container {
+    background: #301501;
+    border-radius: 12px;
+    height: 8px;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    width: 0%;
+    background: #6B0F1A;
+    border-radius: 12px;
+    transition: width 1s ease-in-out;
+  }
+  
+  .progress-slider {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .progress-percentage {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* ================= Review Section ================= */
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #040234;
+    font-size: 14px;
+    resize: vertical;
+  }
+  
+  .btn-send {
+    margin-top: 5px;
+    padding: 8px 15px;
+    border-radius: 12px;
+    background: #6B0F1A;
+    color: #EEF1EF;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  .btn-send:hover {
+    transform: scale(1.05);
+    background: #301501;
+  }
+  
+  /* ================= Recent Reviews ================= */
+  
+  .recent-reviews {
+    text-align: left;
+    margin-top: 15px;
+  }
+  
+  .recent-reviews ul {
+    list-style: none;
+    padding: 0;
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  
+  .recent-reviews ul li {
+    background: #EEF1EF;
+    margin-bottom: 5px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    color: #301501;
+  }
+  
+  /* ================= Share Section ================= */
+  
+  .share-section {
+    margin-top: 10px;
+  }
+  
+  .share-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .share-icon {
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .share-icon:hover {
+    transform: scale(1.2);
+    color: #6B0F1A;
+  }
+  
+  /* ================= Board Section ================= */
+  
+  .board-section {
+    text-align: center;
+    margin-top: 50px;
+    background: #EEF1EF;
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+  
+  .btn-watchlist {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #6B0F1A;
+    color: #EEF1EF;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  .btn-watchlist:hover {
+    transform: scale(1.05);
+    background: #A87D8B;
+  }
+  
+  /* ================= Watched Counters ================= */
+  
+  .watched-counter {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0;
+    color: #6B0F1A;
+    font-weight: bold;
+  }
