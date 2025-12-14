@@ -1,1 +1,133 @@
 
+/*START*/
+section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 550px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.sectionHeader{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primaryColor);
+    margin-bottom: .5em;
+    margin-top: 20px;
+}
+
+.heading,.sub-heading{
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+
+.sub-heading{
+    text-align: center;
+}
+
+.contactForm{
+    display: grid;
+    gap:3em;
+    margin-top: 3em;
+}
+
+.para2 {
+    text-align: left;
+    margin-left: 2.5em;
+    margin-bottom: 1em;
+}
+form{
+    width: 100%;
+}
+
+.input{
+    width:90%;
+    max-width: 700px;
+    border: none;
+    font-size: .9em;
+    padding: 1em;
+    outline: none;
+    margin-bottom: 1em;
+    background-color: var(--fromBg);
+    color: var(--paraColor);
+    border-radius: 10px;
+    border: 1px solid rgb(35, 35, 35);
+}
+
+.input:focus{
+    border: 1px solid var(--primaryColor);
+
+}
+.input:placeholder{
+    text-transform: capitalize;
+}
+.submit{
+    background-color: var(--primaryColor);
+    border:none;
+    color: var(--textColor);
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+.map-container{
+   position: relative;
+   width: 100%;
+   height: 500px;
+}
+.mapBg{
+    position: absolute;
+    background-color: var(--primaryColor);
+    top:0;
+    right:0;
+    width: 200px;
+    height:90%;
+    border-radius: 20px; 
+}
+.map{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:90%;
+    height: 90%;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border:none;
+
+}
+.contactMethod{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.method{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.contactIcon{
+    font-size: 2rem;
+    color: var(--primaryColor);
+    min-width: 50px;
+    text-align: center;
+}
+@media screen and (min-width:800px){
+    section{
+        max-width: 1100px;
+        margin:auto;
+    }
+    .contactForm {
+    grid-template-columns: 1fr 1fr;
+}
+    .contactMethod{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

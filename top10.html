@@ -1,2 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>top10</title>
+<link rel="stylesheet" href="zoestyles.css">
+<link rel="stylesheet" href="top10.css"> 
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-wrapper">
+    
+        <!-- HAMBURGER (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <div class="logo">Name</div>
+        <!-- MAIN LINKS -->
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
 
+            <li class="dropdown">
+                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+                <ul class="dropdown-menu">
+                    <li><a href="christmas.html">Christmas</a></li>
+                    <li><a href="top10.html">Top 10</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="watchlist.html">Personalised Watchlist</a></li>
+                    <li><a href="progress.html">Progress Page</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
 
+         <!-- LOGIN BUTTON (mobile inside menu) -->
+            <li class="mobile-login"><button class="login">Login</button></li>
+        </ul>
+
+        <!-- LOGIN BUTTON (desktop only) -->
+        <button class="login desktop-login">Login</button>
+        </div>
+        </nav>
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("open");
+}
+
+function toggleDropdown(event) {
+    // prevents navigating away
+    event.preventDefault();  
+    event.target.parentElement.classList.toggle("open-dropdown");
+}
+</script>
+     
+<!--MOVIE GRID-->
+<section class="page-intro">
+  <h1>Top Picks of 2025</h1>
+  <p>
+    From blockbuster movies to binge-worthy series, here are the most
+    anticipated and talked-about releases of the year — chosen by fans
+    and critics alike.
+  </p>
+</section>
+
+<div class="title-section"><h2>Top 10 Movies of 2025</h2>
+<p class="section-desc">
+    The biggest releases everyone is talking about this year.
+  </p>
+</div>
+<div class="movie-grid">
+    
+    <div class="movie-card" data-video="https://www.youtube.com/embed/vt98AlBDI9Y?si=wTsGPipg8a6e4lMy">
+        <img src="images/wicked.jpg" class="poster">
+        <h3>Wicked: For Good</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="movie-card" data-video="https://www.youtube.com/embed/-E3lMRx7HRQ?si=HNj2CQw-zjM_pjQc">
+        <img src="images/now you see me.jpg" class="poster">
+        <h3>Now You See Me: Now You Don't</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="movie-card" data-video="https://www.youtube.com/embed/qub8lZlVlho?si=LcPRat1ZEgs96sv5">
+        <img src="images/regrettingyou.jpg" class="poster">
+        <h3>Regretting You</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="movie-card" data-video="https://www.youtube.com/embed/5AwtptT8X8k?si=rxkaSjVmWa5W-ZRL">
+        <img src="images/zootopia.jpg" class="poster">
+        <h3>Zootopia 2</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+   
+     <div class="movie-card" data-video="https://www.youtube.com/embed/bMgfsdYoEEo?si=waWH6sSsycBCBxBf">
+        <img src="images/conjuring.jpg" class="poster">
+        <h3>The Conjuring: Last Rites</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+</div>
+<section class="highlight-box">
+  <h2>Can’t Decide What to Watch?</h2>
+  <p>
+    Explore reviews, ratings, and community opinions before hitting play.
+  </p>
+  <a href="reviews.html" class="highlight-btn">Explore Reviews</a>
+</section>
+
+<div class="title-section"><h2>Top 10 Series of 2025</h2>
+<p class="section-desc">
+    The most binge-worthy series of the year.
+  </p></div>
+<div class="series-grid">
+    <div class="series-card" data-video= "https://www.youtube.com/embed/PssKpzB0Ah0?si=TaseUMwAA0GHlZ4_">
+        <img src="images/strangerthings.jpg" class="poster">
+        <h3>Stranger Things S5</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="series-card" data-video="https://www.youtube.com/embed/uoMLuX42pCk?si=gqT6wXubn0FQMbpT">
+        <img src="images/wewereliars.jpg" class="poster">
+        <h3>We Were Liars S2</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="series-card" data-video="https://www.youtube.com/embed/_UXKlYvLGJY?si=0F5LFocT64nijj1B">
+        <img src="images/severance.jpg" class="poster">
+        <h3>Severance S2</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+
+    <div class="series-card" data-video= "https://www.youtube.com/embed/Wk5OxqtpBR4?si=NVWNE5IdLCXud_dU" >
+        <img src="images/adolescence.jpg" class="poster">
+        <h3>Adolescence</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+    <div class="series-card" data-video="https://youtu.be/lQ17SM1fANQ?si=LnJBQOfhcyVAx78x" >
+        <img src="images/mormonwives.jpg" class="poster">
+        <h3>The Secret Lives of Mormon Wives S3</h3>
+        <div class="play-overlay">▶</div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal" id="trailerModal">
+    <div class="modal-content">
+        <span class="close">×</span>
+
+        <!-- single iframe (removed multiple src attributes) -->
+        <iframe 
+            width = "800" height = "450"
+            id="trailerFrame"
+            src=""
+            title="YouTube video player" 
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('trailerModal');
+    const iframe = document.getElementById('trailerFrame');
+    const closeBtn = document.querySelector('.close');
+    
+    document.querySelectorAll('.movie-card, .series-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const trailerSrc = card.getAttribute('data-video');
+            if (!trailerSrc) return;
+            // append autoplay to the existing url querystring
+            iframe.src = trailerSrc + (trailerSrc.includes('?') ? '&autoplay=1' : '?autoplay=1');
+            modal.style.display = 'flex';
+        });
+    });
+ closeBtn.onclick = () => {
+        modal.style.display = 'none';
+        iframe.src = "";
+    };
+
+    modal.onclick = (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            iframe.src = "";
+        }
+    };
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+            iframe.src = "";
+        }
+    });
+
+ 
+</script>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-col">
+      <h3>MovieHub</h3>
+      <p>Your place to discover, review, and track movies you love.</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Discover -->
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="christmas.html">Christmas</a></li>
+        <li><a href="top10.html">Top 10</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="ratings.html">Ratings</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="watchlist.html">Watchlist</a></li>
+        <li><a href="progress.html">Continue Watching</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#" onclick="openLogin()">Log In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MovieHub. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
