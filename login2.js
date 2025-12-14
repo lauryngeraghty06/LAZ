@@ -1,12 +1,25 @@
-const signupLoginLink = document.getElementById('signupLoginLink');
-const signupAuthOverlay = document.getElementById('signupAuthOverlay');
-const signupCloseAuth = document.getElementById('signupCloseAuth');
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("authOverlay");
+  const closeBtn = document.getElementById("closeAuth");
 
-signupLoginLink.addEventListener('click', e => {
-    e.preventDefault();
-    signupAuthOverlay.classList.add('active');
-});
+  if (!overlay || !closeBtn) return;
 
-signupCloseAuth.addEventListener('click', () => {
-    signupAuthOverlay.classList.remove('active');
+  // Open modal from ANY login button
+  document.querySelectorAll(".loginbtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      overlay.classList.add("active");
+    });
+  });
+
+  // Close modal
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("active");
+  });
+
+  // Close when clicking background
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) {
+      overlay.classList.remove("active");
+    }
+  });
 });
