@@ -171,7 +171,7 @@ body {
     }
 }
 
-.login {
+nav .nav-login-btn {
     padding: 1.0rem 1.5rem;
     background: #A87D8B;
     border: none;
@@ -181,13 +181,13 @@ body {
     font-size: 15px;
     cursor: pointer;
 }
-.login:hover {
+nav .nav-login-btn:hover {
     background: #d1acb8;
 }
-.desktop-login {
+nav .desktop-login {
     display: block;
 }
-.mobile-login {
+nav .mobile-login {
     display: none;
 }
 
@@ -254,3 +254,4 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
