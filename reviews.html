@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Write a Review</title>
+  <link rel="stylesheet" href="reviews.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+  <div class="feedback-card">
+    <h2>What are you reviewing?</h2>
+  <div class="feedback-form">
+    <input
+      type="text"
+      class="movie-title"
+      placeholder="Movie/Show title..."
+    />
+
+    <textarea placeholder="Write a review..."></textarea>
+    <div class="stars">
+      <i class="fa-regular fa-star"></i>
+      <i class="fa-regular fa-star"></i>
+      <i class="fa-regular fa-star"></i>
+      <i class="fa-regular fa-star"></i>
+      <i class="fa-regular fa-star"></i>
+    </div>
+
+      <button class="submit-btn" id="submitBtn" onclick="showPopup()">
+        Submit
+      </button>
+    </div>
+  </div>
+
+  <!-- POPUP -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <div class="checkmark"></div>
+      <h3>Thank You!</h3>
+      <p>We much appreciate your review!</p>
+      <br>
+      <a href="blogs.html" class="submit-btn">Exit</a>
+    </div>
+  </div>
+
+  <script src="reviews.js"></script>
+</body>
+</html>
