@@ -254,4 +254,53 @@ nav .mobile-login {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.auth-overlay.active {
+  display: flex;
+}
+
+.auth-modal {
+  background: #EEF1EF;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.close-auth {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.auth-modal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: #6B0F1A;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 
