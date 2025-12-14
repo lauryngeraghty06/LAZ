@@ -1,21 +1,6 @@
 // progress.js
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ================= Login Modal ================= */
-    const authOverlay = document.getElementById("authOverlay");
-    const closeAuthBtn = document.getElementById("closeAuth");
-    const loginButtons = document.querySelectorAll(".login-btn");
-  
-    loginButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        authOverlay.style.display = "flex";
-      });
-    });
-  
-    closeAuthBtn.addEventListener("click", () => {
-      authOverlay.style.display = "none";
-    });
-  
     /* ================= Progress Bars ================= */
     const progressCards = document.querySelectorAll(".progress-card");
   

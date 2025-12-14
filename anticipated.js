@@ -1,11 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ================= LOGIN MODAL =================
-    const loginBtn = document.getElementById("loginBtn");
-    const authOverlay = document.getElementById("authOverlay");
-    const closeAuth = document.getElementById("closeAuth");
-  
-    loginBtn.addEventListener("click", () => authOverlay.classList.add("active"));
-    closeAuth.addEventListener("click", () => authOverlay.classList.remove("active"));
   
     // ================= ADD TO WATCHLIST =================
     const watchlistButtons = document.querySelectorAll(".btn-watchlist");

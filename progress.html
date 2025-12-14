@@ -3,47 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Progress Page</title>
-<link rel="stylesheet" href="zoestyles.css">
 <link rel="stylesheet" href="progress.css">
 <script src="progress.js" defer></script>
+<link rel="stylesheet" href="zoestyles.css">
+<script src="login2.js" defer></script>
 </head>
 <body>
-  <!-- NAVBAR -->
-<nav class="nav">
+ <!-- NAVBAR -->
+ <nav class="nav">
     <div class="nav-wrapper">
     
         <!-- HAMBURGER (mobile only) -->
         <div class="hamburger" onclick="toggleMenu()">
-            ☰
         </div>
         <div class="logo">CineTracker</div>
         <!-- MAIN LINKS -->
         <ul class="nav-links">
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-
+          
             <li class="dropdown">
-                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
-                <ul class="dropdown-menu">
-                    <li><a href="christmas.html">Christmas</a></li>
-                    <li><a href="top10.html">Top 10</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="blogs.html">Blog</a></li>
-                    <li><a href="watchlist.html">Watchlist</a></li>
-                    <li><a href="progress.html">Continue Watching</a></li>
-                </ul>
+              <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+              <ul class="dropdown-menu">
+                <li><a href="christmas.html">Christmas</a></li>
+                <li><a href="top10.html">Top 10</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+                <li><a href="progress.html">Continue Watching</a></li>
+              </ul>
             </li>
+          
             <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-
-         <!-- LOGIN BUTTON (mobile inside menu) -->
+          
+            <!-- LOGIN BUTTON (mobile) -->
             <li class="mobile-login">
-              <button class="nav-login-btn" onclick="openLogin()">Login</button>
+              <button class="loginbtn">Login</button>
             </li>
-        </ul>
+          </ul>
+
 
         <!-- LOGIN BUTTON (desktop only) -->
-        <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
+        <button class="loginbtn desktop-login">Login</button>
         </div>
         </nav>
 <script>
@@ -58,21 +59,25 @@ function toggleDropdown(event) {
 }
 </script>
 <!--NAVBAR ENDING-->
-
 <!-- LOGIN MODAL -->
 <div class="auth-overlay" id="authOverlay">
-  <div class="auth-modal">
-    <button class="close-auth" id="closeAuth">&times;</button>
-    <h1>Welcome Back!</h1>
-    <p>Sign in to continue tracking your movies.</p>
-    <input type="email" placeholder="Email address" required>
-    <input type="password" placeholder="Password" required>
-    <button class="btn-login">Log In</button>
-    <p class="auth-footer">
-      Don't have an account? <a href="signup.html">Sign Up</a>
-    </p>
+    <div class="auth-modal">
+      <button class="close-auth" id="closeAuth">&times;</button>
+  
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue tracking your movies.</p>
+  
+      <input type="email" placeholder="Email address">
+      <input type="password" placeholder="Password">
+  
+      <button class="btn-login">Log In</button>
+  
+      <p class="auth-footer">
+        Don’t have an account?
+        <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
   </div>
-</div>
 
 <section class="progress-page">
   <h1>Update Your Progress</h1>
@@ -184,54 +189,52 @@ function toggleDropdown(event) {
 
 </section>
 <footer class="footer">
-  <div class="footer-container">
-
-    <!-- Brand / About -->
-    <div class="footer-col">
-      <h3>CineTracker</h3>
-      <p>Your place to discover, review, and track movies you love.</p>
+    <div class="footer-container">
+  
+      <!-- Brand / About -->
+      <div class="footer-col">
+        <h3>CineTracker</h3>
+        <p>Your place to discover, review, and track movies you love.</p>
+      </div>
+  
+      <!-- Navigation -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Discover -->
+      <div class="footer-col">
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="christmas.html">Christmas</a></li>
+          <li><a href="top10.html">Top 10</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="watchlist.html">Watchlist</a></li>
+          <li><a href="progress.html">Continue Watching</a></li>
+        </ul>
+      </div>
+  
+      <!-- Account -->
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="#" class="loginbtn">Log In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+  
     </div>
-
-    <!-- Navigation -->
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+  
+    <div class="footer-bottom">
+      <p>© 2025 CineTracker. All rights reserved.</p>
     </div>
-
-    <!-- Discover -->
-    <div class="footer-col">
-      <h4>Discover</h4>
-      <ul>
-        <li><a href="christmas.html">Christmas</a></li>
-        <li><a href="top10.html">Top 10</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="ratings.html">Ratings</a></li>
-        <li><a href="blogs.html">Blog</a></li>
-        <li><a href="watchlist.html">Watchlist</a></li>
-        <li><a href="progress.html">Continue Watching</a></li>
-      </ul>
-    </div>
-
-    <!-- Account -->
-    <div class="footer-col">
-      <h4>Account</h4>
-      <ul>
-        <li><a href="#" onclick="openLogin()">Log In</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 CineTracker. All rights reserved.</p>
-  </div>
-</footer>
-
-
-</body>
-</html>
+  </footer>
+  
+  </body>
+  </html>

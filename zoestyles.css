@@ -254,6 +254,9 @@ nav .mobile-login {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ================= LOGIN MODAL ================= */
+
 .auth-overlay {
     position: fixed;
     inset: 0;
@@ -332,6 +335,3 @@ nav .mobile-login {
     color: #6B0F1A;
     font-weight: 600;
   }
-
-
-

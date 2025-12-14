@@ -3,13 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title>My Watchlist</title>
-<link rel="stylesheet" href="zoestyles.css">
+
+<!-- CSS -->
 <link rel="stylesheet" href="watchlist.css">
+<link rel="stylesheet" href="zoestyles.css">
+
+<!-- JS -->
 <script src="watchlist.js" defer></script>
 <script src="login2.js" defer></script>
 </head>
+
 <body>
-  <!-- NAVBAR -->
+<!-- NAVBAR -->
 <nav class="nav">
     <div class="nav-wrapper">
     
@@ -29,7 +34,6 @@
                     <li><a href="christmas.html">Christmas</a></li>
                     <li><a href="top10.html">Top 10</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="ratings.html">Ratings</a></li>
                     <li><a href="blogs.html">Blog</a></li>
                     <li><a href="watchlist.html">Watchlist</a></li>
                     <li><a href="progress.html">Continue Watching</a></li>
@@ -40,12 +44,12 @@
 
          <!-- LOGIN BUTTON (mobile inside menu) -->
             <li class="mobile-login">
-              <button class="nav-login-btn" onclick="openLogin()">Login</button>
+              <button class="loginbtn">Login</button>
             </li>
         </ul>
 
         <!-- LOGIN BUTTON (desktop only) -->
-        <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
+        <button class="loginbtn desktop-login">Login</button>
         </div>
         </nav>
 <script>
@@ -60,21 +64,25 @@ function toggleDropdown(event) {
 }
 </script>
 <!--NAVBAR ENDING-->
-
 <!-- LOGIN MODAL -->
 <div class="auth-overlay" id="authOverlay">
-  <div class="auth-modal">
-    <button class="close-auth" id="closeAuth">&times;</button>
-    <h1>Welcome Back!</h1>
-    <p>Sign in to continue tracking your movies.</p>
-    <input type="email" placeholder="Email address" required>
-    <input type="password" placeholder="Password" required>
-    <button class="btn-login">Log In</button>
-    <p class="auth-footer">
-      Don't have an account? <a href="signup.html">Sign Up</a>
-    </p>
+    <div class="auth-modal">
+      <button class="close-auth" id="closeAuth">&times;</button>
+  
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue tracking your movies.</p>
+  
+      <input type="email" placeholder="Email address">
+      <input type="password" placeholder="Password">
+  
+      <button class="btn-login">Log In</button>
+  
+      <p class="auth-footer">
+        Don’t have an account?
+        <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
   </div>
-</div>
 
 <!-- WATCHLIST PAGE -->
 <section class="watchlist-page">
@@ -98,7 +106,7 @@ function toggleDropdown(event) {
   <div class="watchlist-grid">
     <!-- Card 1 -->
     <div class="watchlist-card" data-type="movie">
-      <img src="images/inception.jpg" alt="Inception">
+      <img src="images/Inception.jpg" alt="Inception">
       <h2>Inception</h2>
       <p>Movie, 2010</p>
       <div class="progress-container">
@@ -241,16 +249,15 @@ function toggleDropdown(event) {
     <a href="anticipated.html" class="btn-explore">Add More Titles</a>
   </div>
 </section>
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
-    <!-- Brand / About -->
     <div class="footer-col">
       <h3>CineTracker</h3>
       <p>Your place to discover, review, and track movies you love.</p>
     </div>
 
-    <!-- Navigation -->
     <div class="footer-col">
       <h4>Navigation</h4>
       <ul>
@@ -260,25 +267,22 @@ function toggleDropdown(event) {
       </ul>
     </div>
 
-    <!-- Discover -->
     <div class="footer-col">
       <h4>Discover</h4>
       <ul>
         <li><a href="christmas.html">Christmas</a></li>
         <li><a href="top10.html">Top 10</a></li>
         <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="ratings.html">Ratings</a></li>
         <li><a href="blogs.html">Blog</a></li>
         <li><a href="watchlist.html">Watchlist</a></li>
         <li><a href="progress.html">Continue Watching</a></li>
       </ul>
     </div>
 
-    <!-- Account -->
     <div class="footer-col">
       <h4>Account</h4>
       <ul>
-        <li><a href="#" onclick="openLogin()">Log In</a></li>
+        <li><a href="#" class="loginbtn">Log In</a></li>
         <li><a href="signup.html">Sign Up</a></li>
       </ul>
     </div>
@@ -286,10 +290,9 @@ function toggleDropdown(event) {
   </div>
 
   <div class="footer-bottom">
-    <p>© 2025 CineTracker All rights reserved.</p>
+    <p>© 2025 CineTracker. All rights reserved.</p>
   </div>
 </footer>
-
 
 </body>
 </html>
