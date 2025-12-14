@@ -31,6 +31,7 @@
                     <li><a href="reviews.html">Reviews</a></li>
                     <li><a href="blogs.html">Blog</a></li>
                     <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a herf="anticipated.html">Anticipated<a></li>
                     <li><a href="progress.html">Continue Watching</a></li>
                 </ul>
             </li>
@@ -39,14 +40,15 @@
 
          <!-- LOGIN BUTTON (mobile inside menu) -->
             <li class="mobile-login">
-              <button class="loginbtn">Login</button>
+              <button class="nav-login-btn" onclick="openLogin()">Login</button>
             </li>
         </ul>
 
         <!-- LOGIN BUTTON (desktop only) -->
-        <button class="loginbtn desktop-login">Login</button>
-   </div>
-</nav>
+        <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
+        </div>
+        </nav>
+        </nav>
 <script>
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("open");
@@ -63,7 +65,7 @@ function toggleDropdown(event) {
 <div class="auth-overlay" id="authOverlay">
   <div class="auth-modal">
     <button class="close-auth" id="closeAuth">&times;</button>
-    <h1>Welcome Back</h1>
+    <h1>Welcome Back!</h1>
     <p>Sign in to continue tracking your movies.</p>
     <input type="email" placeholder="Email address" required>
     <input type="password" placeholder="Password" required>
@@ -85,16 +87,16 @@ function toggleDropdown(event) {
   <p class="top-label">Fan Favorites & Most Wanted</p>
   <div class="top-grid">
     <div class="anticipated-card" data-type="Movie" data-genre="Action">
-      <img src="images/inception-2026.jpg" alt="Inception 2">
-      <h2>Inception 2</h2>
+      <img src="images/avengers.jpeg" alt="Avengers">
+      <h2>Avengers:Doomsday</h2>
       <p>Movie, 2026</p>
       <p class="release-date">Coming Soon</p>
       <button class="btn-watchlist">Add to Watchlist</button>
     </div>
     <div class="anticipated-card" data-type="TV" data-genre="Sci-Fi">
-      <img src="images/stranger-things-2026.jpg" alt="Stranger Things 6">
-      <h2>Stranger Things 6</h2>
-      <p>TV, 2026</p>
+      <img src="images/TS5.jpeg" alt="Toy Story 3">
+      <h2>Toy Story:5</h2>
+      <p>Movies, 2026</p>
       <p class="release-date">To Be Released</p>
       <button class="btn-watchlist">Add to Watchlist</button>
     </div>
@@ -118,73 +120,73 @@ function toggleDropdown(event) {
 <section class="anticipated-grid">
   <!-- 9 Cards Total -->
   <div class="anticipated-card" data-type="Movie" data-genre="Action">
-    <img src="images/avatar-2.jpg" alt="Avatar 2">
-    <h2>Avatar 2</h2>
-    <p>Movie, 2026</p>
-    <p class="release-date">December 20, 2026</p>
+    <img src="images/TDS4.jpeg" alt="Ted Lasso">
+    <h2>Ted Lasso: Season 4</h2>
+    <p>Tv Show, 2026</p>
+    <p class="release-date">To Be Announced</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
 
   <div class="anticipated-card" data-type="TV" data-genre="Drama">
-    <img src="images/the-crown-season-6.jpg" alt="The Crown S6">
-    <h2>The Crown Season 6</h2>
-    <p>TV, 2026</p>
-    <p class="release-date">March 2026</p>
+    <img src="images/FW.jpeg" alt="Fourth Wing">
+    <h2>Fourth Wing</h2>
+    <p>Tv Show, 2026</p>
+    <p class="release-date">To Be Announced</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
 
   <div class="anticipated-card" data-type="Movie" data-genre="Sci-Fi">
-    <img src="images/matrix-4.jpg" alt="Matrix 4">
-    <h2>Matrix 4</h2>
+    <img src="images/SM.jpeg" alt="Spider Man">
+    <h2>Spider Man:Brand new Day</h2>
     <p>Movie, 2026</p>
     <p class="release-date">Coming Soon</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
 
   <div class="anticipated-card" data-type="Movie" data-genre="Action">
-    <img src="images/mission-impossible-8.jpg" alt="Mission Impossible 8">
-    <h2>Mission Impossible 8</h2>
-    <p>Movie, 2026</p>
-    <p class="release-date">July 2026</p>
+    <img src="images/TML.jpeg" alt="Tell Me Lies">
+    <h2>Tell Me lies:Season 3</h2>
+    <p>Tv Show, 2026</p>
+    <p class="release-date">January 2026</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
 
   <div class="anticipated-card" data-type="TV" data-genre="Fantasy">
-    <img src="images/the-witcher-season-4.jpg" alt="The Witcher S4">
-    <h2>The Witcher Season 4</h2>
-    <p>TV, 2026</p>
+    <img src="images/Dunne.jpeg" alt="Dunne">
+    <h2>Dunne:Part 3</h2>
+    <p>Movie, 2026</p>
     <p class="release-date">To Be Released</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
 
   <div class="anticipated-card" data-type="Movie" data-genre="Animation">
-    <img src="images/frozen-3.jpg" alt="Frozen 3">
-    <h2>Frozen 3</h2>
-    <p>Movie, 2026</p>
-    <p class="release-date">November 2026</p>
+    <img src="images/HOD.jpeg" alt="House Of Dragon">
+    <h2>House Of Dragon</h2>
+    <p>Tv Show, 2026</p>
+    <p class="release-date">July 2026</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
 
   <div class="anticipated-card" data-type="Movie" data-genre="Action">
-    <img src="images/black-panther-2.jpg" alt="Black Panther 2">
-    <h2>Black Panther 2</h2>
+    <img src="images/WH.jpeg" alt="Withering Heights">
+    <h2>Wuthering Heights</h2>
     <p>Movie, 2026</p>
-    <p class="release-date">May 2026</p>
+    <p class="release-date">Febuary 2026</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
 
   <div class="anticipated-card" data-type="TV" data-genre="Drama">
-    <img src="images/better-call-saul-s6.jpg" alt="Better Call Saul S6">
-    <h2>Better Call Saul Season 6</h2>
-    <p>TV, 2026</p>
-    <p class="release-date">Coming Soon</p>
+    <img src="images/TDWP2.jpeg" alt="The Devil Wears Prada: 2">
+    <h2>The Devil Wears Prada: 2</h2>
+    <p>Movie, 2026</p>
+    <p class="release-date">January 2026</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
 
   <div class="anticipated-card" data-type="Movie" data-genre="Fantasy">
-    <img src="images/hobbit-4.jpg" alt="Hobbit 4">
-    <h2>The Hobbit 4</h2>
-    <p>Movie, 2026</p>
+    <img src="images/BS4.jpeg" alt="Bridgerton">
+    <h2>Bridgerton Season 4</h2>
+    <p>Tv Show, 2026</p>
     <p class="release-date">To Be Released</p>
     <button class="btn-watchlist">Add to Watchlist</button>
   </div>
@@ -225,6 +227,7 @@ function toggleDropdown(event) {
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="blogs.html">Blog</a></li>
         <li><a href="watchlist.html">Watchlist</a></li>
+        <li><a href="anticipated.html">Anticipated</a></li>
         <li><a href="progress.html">Continue Watching</a></li>
       </ul>
     </div>
