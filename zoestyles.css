@@ -255,52 +255,83 @@ nav .mobile-login {
   }
 }
 .auth-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 2, 52, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .auth-overlay.active {
+    display: flex;
+  }
+  
+  .auth-modal {
+    background: #EEF1EF;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+  
+  .auth-modal h1 {
+    color: #040234;
+    margin-bottom: 10px;
+  }
+  
+  .auth-modal p {
+    color: #301501;
+    margin-bottom: 20px;
+  }
+  
+  .auth-modal input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #A87D8B;
+    border-radius: 6px;
+  }
+  
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #6B0F1A;
+    color: #EEF1EF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn-login:hover {
+    background: #301501;
+  }
+  
+  .close-auth {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #040234;
+  }
+  
+  .auth-footer {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .auth-footer a {
+    color: #6B0F1A;
+    font-weight: 600;
+  }
 
-.auth-overlay.active {
-  display: flex;
-}
-
-.auth-modal {
-  background: #EEF1EF;
-  padding: 40px;
-  width: 100%;
-  max-width: 420px;
-  border-radius: 12px;
-  text-align: center;
-  position: relative;
-}
-
-.close-auth {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.auth-modal input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-}
-
-.btn-login {
-  width: 100%;
-  padding: 12px;
-  background: #6B0F1A;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 
 
