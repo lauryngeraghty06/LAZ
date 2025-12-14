@@ -3,142 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <title>Write a Review</title>
-  <link rel="stylesheet" href="reviews.css">
+
   <link rel="stylesheet" href="zoestyles.css">
+  <link rel="stylesheet" href="reviews.css">
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 </head>
 <body>
-  <!-- NAVBAR -->
+
 <nav class="nav">
-    <div class="nav-wrapper">
-    
-        <!-- HAMBURGER (mobile only) -->
-        <div class="hamburger" onclick="toggleMenu()">
-            ☰
-        </div>
-        <div class="logo">CineTracker</div>
-        <!-- MAIN LINKS -->
-        <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
+  <div class="nav-wrapper">
 
-            <li class="dropdown">
-                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
-                <ul class="dropdown-menu">
-                    <li><a href="christmas.html">Christmas</a></li>
-                    <li><a href="top10.html">Top 10</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="blogs.html">Blog</a></li>
-                    <li><a href="watchlist.html">Watchlist</a></li>
-                    <li><a href="progress.html">Continue Watching</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Contact Us</a></li>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="logo">CineTracker</div>
+
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+
+      <li class="dropdown">
+        <a href="#" onclick="toggleDropdown(event)">Discover</a>
+        <ul class="dropdown-menu">
+          <li><a href="christmas.html">Christmas</a></li>
+          <li><a href="top10.html">Top 10</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="watchlist.html">Watchlist</a></li>
+          <li><a href="progress.html">Continue Watching</a></li>
         </ul>
+      </li>
 
-         <!-- LOGIN BUTTON (mobile inside menu) -->
-            <li class="mobile-login">
-              <button class="nav-login-btn" onclick="openLogin()">Login</button>
-            </li>
-        </ul>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
 
-        <!-- LOGIN BUTTON (desktop only) -->
-        <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
-        </div>
-        </nav>
+    <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
+  </div>
+</nav>
+
 <script>
 function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("open");
+  document.querySelector(".nav-links").classList.toggle("open");
 }
-
-function toggleDropdown(event) {
-    // prevents navigating away
-    event.preventDefault();  
-    event.target.parentElement.classList.toggle("open-dropdown");
+function toggleDropdown(e) {
+  e.preventDefault();
+  e.target.parentElement.classList.toggle("open-dropdown");
 }
 </script>
-<!--NAVBAR ENDING-->
-<section>
+
+<section id="reviews" class="reviews-section">
+
   <div class="feedback-card">
     <h2>What are you reviewing?</h2>
-  <div class="feedback-form">
-    <input
-      type="text"
-      class="movie-title"
-      placeholder="Movie/Show title..."
-    />
 
-    <textarea placeholder="Write a review..."></textarea>
-    <div class="stars">
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-    </div>
+    <div class="feedback-form">
+      <input
+        type="text"
+        class="movie-title"
+        placeholder="Movie/Show title..."
+      />
 
-      <button class="submit-btn" id="submitBtn" onclick="showPopup()">
-        Submit
-      </button>
-    </div>
-  </div>
+      <textarea placeholder="Write a review..."></textarea>
 
-  <!-- POPUP -->
-  <div class="popup-overlay" id="popup">
-    <div class="popup-content">
-      <div class="checkmark"></div>
-      <h3>Thank You!</h3>
-      <p>We much appreciate your review!</p>
-      <br>
-      <a href="blogs.html" class="submit-btn">Exit</a>
+      <div class="stars">
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      </div>
+
+      <button class="submit-btn" onclick="showPopup()">Submit</button>
     </div>
   </div>
+
 </section>
-  <script src="images/reviews.js"></script>
-  <footer class="footer">
-  <div class="footer-container">
 
-    <!-- Brand / About -->
+<script src="images/reviews.js"></script>
+
+
+<footer class="footer">
+  <div class="footer-container">
     <div class="footer-col">
       <h3>CineTracker</h3>
       <p>Your place to discover, review, and track movies you love.</p>
     </div>
-
-    <!-- Navigation -->
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Discover -->
-    <div class="footer-col">
-      <h4>Discover</h4>
-      <ul>
-        <li><a href="christmas.html">Christmas</a></li>
-        <li><a href="top10.html">Top 10</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="blogs.html">Blog</a></li>
-        <li><a href="watchlist.html">Watchlist</a></li>
-        <li><a href="progress.html">Continue Watching</a></li>
-      </ul>
-    </div>
-
-    <!-- Account -->
-    <div class="footer-col">
-      <h4>Account</h4>
-      <ul>
-        <li><a href="#" onclick="openLogin()">Log In</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-      </ul>
-    </div>
-
   </div>
 
   <div class="footer-bottom">
@@ -148,8 +99,3 @@ function toggleDropdown(event) {
 
 </body>
 </html>
-
-
-
-
-
