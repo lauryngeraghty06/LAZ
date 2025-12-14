@@ -4,98 +4,152 @@
   <meta charset="UTF-8">
   <title>Write a Review</title>
 
-  <link rel="stylesheet" href="zoestyles.css">
   <link rel="stylesheet" href="reviews.css">
-
+  <link rel="stylesheet" href="zoestyles.css">
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 </head>
+
 <body>
 
-<nav class="nav">
-  <div class="nav-wrapper">
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-wrapper">
 
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="logo">CineTracker</div>
+      <!-- HAMBURGER (mobile only) -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <div class="logo">CineTracker</div>
 
-      <li class="dropdown">
-        <a href="#" onclick="toggleDropdown(event)">Discover</a>
-        <ul class="dropdown-menu">
+      <!-- MAIN LINKS -->
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+
+        <li class="dropdown">
+          <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+          <ul class="dropdown-menu">
+            <li><a href="christmas.html">Christmas</a></li>
+            <li><a href="top10.html">Top 10</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="progress.html">Continue Watching</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <!-- LOGIN BUTTON -->
+      <button class="nav-login-btn desktop-login" onclick="openLogin()">
+        Login
+      </button>
+
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("open");
+    }
+
+    function toggleDropdown(event) {
+      event.preventDefault();
+      event.target.parentElement.classList.toggle("open-dropdown");
+    }
+  </script>
+  <!-- NAVBAR END -->
+
+  <!-- REVIEWS SECTION -->
+   <section id="reviews" class="reviews-section">
+
+    <div class="feedback-card">
+      <h2>What are you reviewing?</h2>
+
+      <div class="feedback-form">
+        <input
+          type="text"
+          class="movie-title"
+          placeholder="Movie/Show title..."
+        />
+
+        <textarea placeholder="Write a review..."></textarea>
+
+        <div class="stars">
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+
+        <button class="submit-btn" id="submitBtn">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-content">
+        <h3>Thank You!</h3>
+        <p>We much appreciate your review!</p>
+        <br>
+        <a href="blogs.html" class="submit-btn">Exit</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- JS -->
+  <script src="reviews.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>CineTracker</h3>
+        <p>Your place to discover, review, and track movies you love.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Discover</h4>
+        <ul>
           <li><a href="christmas.html">Christmas</a></li>
           <li><a href="top10.html">Top 10</a></li>
-          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
           <li><a href="blogs.html">Blog</a></li>
           <li><a href="watchlist.html">Watchlist</a></li>
           <li><a href="progress.html">Continue Watching</a></li>
         </ul>
-      </li>
-
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-
-    <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
-  </div>
-</nav>
-
-<script>
-function toggleMenu() {
-  document.querySelector(".nav-links").classList.toggle("open");
-}
-function toggleDropdown(e) {
-  e.preventDefault();
-  e.target.parentElement.classList.toggle("open-dropdown");
-}
-</script>
-
-<section id="reviews" class="reviews-section">
-
-  <div class="feedback-card">
-    <h2>What are you reviewing?</h2>
-
-    <div class="feedback-form">
-      <input
-        type="text"
-        class="movie-title"
-        placeholder="Movie/Show title..."
-      />
-
-      <textarea placeholder="Write a review..."></textarea>
-
-      <div class="stars">
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
       </div>
 
-      <button class="submit-btn" onclick="showPopup()">Submit</button>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="#" onclick="openLogin()">Log In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+
     </div>
-  </div>
 
-</section>
-
-<script src="images/reviews.js"></script>
-
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-col">
-      <h3>CineTracker</h3>
-      <p>Your place to discover, review, and track movies you love.</p>
+    <div class="footer-bottom">
+      <p>© 2025 CineTracker. All rights reserved.</p>
     </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 CineTracker. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
