@@ -1,67 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most Anticipated 2026</title>
-
-    <link rel="stylesheet" href="anticipated.css">
-    <link rel="stylesheet" href="login.css">
-    <script src="login.js" defer></script>
+<meta charset="UTF-8">
+<title>Anticipated 2026</title>
+<link rel="stylesheet" href="anticipated.css">
+<script src="login2.js" defer></script>
+<script src="anticipated.js" defer></script>
 </head>
-
 <body>
 
-<header class="header">
-    <h1 class="title">Most Anticipated Films of 2026</h1>
-    <p class="subtitle">Upcoming movies everyone’s talking about.</p>
-</header>
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-modal">
+    <button class="close-auth" id="closeAuth">&times;</button>
+    <h1>Welcome Back!</h1>
+    <p>Sign in to continue tracking your movies.</p>
+    <input type="email" placeholder="Email address" required>
+    <input type="password" placeholder="Password" required>
+    <button class="btn-login">Log In</button>
+    <p class="auth-footer">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </p>
+  </div>
+</div>
 
-<section class="movies-grid">
-
-    <div class="movie-card">
-        <div class="poster"></div>
-        <h3 class="movie-title">2026 Movie One</h3>
-        <p class="text">A big action release coming next year.</p>
-    </div>
-
-    <div class="movie-card">
-        <div class="poster"></div>
-        <h3 class="movie-title">2026 Movie Two</h3>
-        <p class="text">Sci-fi adventure expected mid-2026.</p>
-    </div>
-
-    <div class="movie-card">
-        <div class="poster"></div>
-        <h3 class="movie-title">2026 Movie Three</h3>
-        <p class="text">Highly anticipated fantasy film.</p>
-    </div>
-
+<!-- PAGE HEADER -->
+<section class="anticipated-header">
+  <h1>Anticipated Releases 2026</h1>
+  <p>See what movies and TV shows fans are most excited about in 2026.</p>
 </section>
 
-<div id="loginModal" class="login">
-    <div class="login-content">
-        <span class="close" onclick="closeLogin()">&times;</span>
-
-        <h2>Welcome Back!</h2>
-
-        <form class="login-form">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email">
-
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password">
-
-            <button class="main-btn">Sign In</button>
-
-            <p>
-                Don't have an account?
-                <a href="../signup/signup.html" class="link">Sign Up</a>
-            </p>
-        </form>
+<!-- TOP 2 FEATURED -->
+<section class="top-anticipated">
+  <p class="top-label">Fan Favorites & Most Wanted</p>
+  <div class="top-grid">
+    <div class="anticipated-card" data-type="Movie" data-genre="Action">
+      <img src="images/inception-2026.jpg" alt="Inception 2">
+      <h2>Inception 2</h2>
+      <p>Movie, 2026</p>
+      <p class="release-date">Coming Soon</p>
+      <button class="btn-watchlist">Add to Watchlist</button>
     </div>
-</div>
+    <div class="anticipated-card" data-type="TV" data-genre="Sci-Fi">
+      <img src="images/stranger-things-2026.jpg" alt="Stranger Things 6">
+      <h2>Stranger Things 6</h2>
+      <p>TV, 2026</p>
+      <p class="release-date">To Be Released</p>
+      <button class="btn-watchlist">Add to Watchlist</button>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<section class="filter-section">
+  <label for="genreFilter">Filter by Genre:</label>
+  <select id="genreFilter">
+    <option value="All">All</option>
+    <option value="Action">Action</option>
+    <option value="Drama">Drama</option>
+    <option value="Sci-Fi">Sci-Fi</option>
+    <option value="Fantasy">Fantasy</option>
+    <option value="Animation">Animation</option>
+  </select>
+</section>
+
+<!-- ANTICIPATED GRID -->
+<section class="anticipated-grid">
+  <!-- 9 Cards Total -->
+  <div class="anticipated-card" data-type="Movie" data-genre="Action">
+    <img src="images/avatar-2.jpg" alt="Avatar 2">
+    <h2>Avatar 2</h2>
+    <p>Movie, 2026</p>
+    <p class="release-date">December 20, 2026</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+
+  <div class="anticipated-card" data-type="TV" data-genre="Drama">
+    <img src="images/the-crown-season-6.jpg" alt="The Crown S6">
+    <h2>The Crown Season 6</h2>
+    <p>TV, 2026</p>
+    <p class="release-date">March 2026</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+
+  <div class="anticipated-card" data-type="Movie" data-genre="Sci-Fi">
+    <img src="images/matrix-4.jpg" alt="Matrix 4">
+    <h2>Matrix 4</h2>
+    <p>Movie, 2026</p>
+    <p class="release-date">Coming Soon</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+
+  <div class="anticipated-card" data-type="Movie" data-genre="Action">
+    <img src="images/mission-impossible-8.jpg" alt="Mission Impossible 8">
+    <h2>Mission Impossible 8</h2>
+    <p>Movie, 2026</p>
+    <p class="release-date">July 2026</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+
+  <div class="anticipated-card" data-type="TV" data-genre="Fantasy">
+    <img src="images/the-witcher-season-4.jpg" alt="The Witcher S4">
+    <h2>The Witcher Season 4</h2>
+    <p>TV, 2026</p>
+    <p class="release-date">To Be Released</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+
+  <div class="anticipated-card" data-type="Movie" data-genre="Animation">
+    <img src="images/frozen-3.jpg" alt="Frozen 3">
+    <h2>Frozen 3</h2>
+    <p>Movie, 2026</p>
+    <p class="release-date">November 2026</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+
+  <div class="anticipated-card" data-type="Movie" data-genre="Action">
+    <img src="images/black-panther-2.jpg" alt="Black Panther 2">
+    <h2>Black Panther 2</h2>
+    <p>Movie, 2026</p>
+    <p class="release-date">May 2026</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+
+  <div class="anticipated-card" data-type="TV" data-genre="Drama">
+    <img src="images/better-call-saul-s6.jpg" alt="Better Call Saul S6">
+    <h2>Better Call Saul Season 6</h2>
+    <p>TV, 2026</p>
+    <p class="release-date">Coming Soon</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+
+  <div class="anticipated-card" data-type="Movie" data-genre="Fantasy">
+    <img src="images/hobbit-4.jpg" alt="Hobbit 4">
+    <h2>The Hobbit 4</h2>
+    <p>Movie, 2026</p>
+    <p class="release-date">To Be Released</p>
+    <button class="btn-watchlist">Add to Watchlist</button>
+  </div>
+</section>
+
+<!-- LINK TO WATCHLIST -->
+<!-- Go to Watchlist -->
+<section class="go-watchlist">
+  <p>Ready to keep track of all your favorites? Check your Watchlist!</p>
+  <a href="watchlist.html" class="btn-explore">Go to Watchlist</a>
+</section>
 
 
 </body>
 </html>
+

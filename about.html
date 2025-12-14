@@ -1,125 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="login.css">
-    <script src="login.js" defer></script>
+<meta charset="UTF-8">
+<title>About Our Project</title>
+<link rel="stylesheet" href="about.css">
+<script src="about.js" defer></script>
 </head>
-
 <body>
 
-        <div class="nav">
-            <nav class="nav-links">
-                <header>Name</header>
-                <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="christmas.html">Christmas</a></li>
-
-                <li class="dropdown">
-                    <a href="reviews.html">Reviews</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="top10.html">Top 10</a></li>
-                        <li><a href="reviews.html">Reviews</a></li>
-                        <li><a href="ratings.html">Ratings</a></li>
-                        <li><a href="blogs.html">Blog</a></li>
-                    </ul>
-                </li>
-                <li><a href="watchlist.html">Personalised Watchlist</a></li>
-                <li><a href="progress.html">Progress Page</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                <div class="buttons">
-                    <button class="login">Login</button>
-                </div>
-            </nav>
-        </div>
-<header class="hero">
-    <div class="hero-content">
-        <h1 class="page-title">About CineTrack</h1>
-        <p class="subtitle">Your space to track, discover, and love movies.</p>
-    </div>
-</header>
-
-<section class="section">
-    <h2 class="heading">Who We Are</h2>
-    <p class="text">
-        CineTrack is built for movie lovers who want a simple, clean, and personalised space 
-        to keep track of films they've watched, loved, or can't wait to see. 
-        Our mission is to make movie tracking fun, easy, and stress-free.
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-modal">
+    <button class="close-auth" id="closeAuth">&times;</button>
+    <h1>Welcome Back!</h1>
+    <p>Sign in to continue using the site.</p>
+    <input type="email" placeholder="Email address" required>
+    <input type="password" placeholder="Password" required>
+    <button class="btn-login">Log In</button>
+    <p class="auth-footer">
+      Don't have an account? <a href="signup.html">Sign Up</a>
     </p>
-</section>
-
-<section class="team-section">
-    <h2 class="heading">Meet the Team</h2>
-
-    <div class="team-grid">
-        <div class="team-card">
-            <div class="pfp"></div>
-            <h3 class="name">Lauryn</h3>
-            <p class="role">Designer & Frontend</p>
-        </div>
-
-        <div class="team-card">
-            <div class="pfp"></div>
-            <h3 class="name">Zoe</h3>
-            <p class="role">Navigation & UI</p>
-        </div>
-
-        <div class="team-card">
-            <div class="pfp"></div>
-            <h3 class="name">Teammate</h3>
-            <p class="role">Backend</p>
-        </div>
-
-        <div class="team-card">
-            <div class="pfp"></div>
-            <h3 class="name">Teammate</h3>
-            <p class="role">Research</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <h2 class="heading">What We Offer</h2>
-
-    <ul class="list">
-        <li>Personalised movie watchlist</li>
-        <li>Liked films page</li>
-        <li>Most anticipated releases for 2026</li>
-        <li>Progress tracking</li>
-        <li>Clean, simple, modern design</li>
-    </ul>
-</section>
-
-<!-- LOGIN POPUP -->
-<div id="loginModal" class="login">
-    <div class="login-content">
-        <span class="close" onclick="closeLogin()">&times;</span>
-
-        <h2>Welcome Back!</h2>
-
-        <form class="login-form">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email">
-
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password">
-
-            <button class="main-btn">Sign In</button>
-
-            <p>
-                Don't have an account?
-                <a href="../signup/signup.html" class="link">Sign Up</a>
-            </p>
-        </form>
-    </div>
+  </div>
 </div>
 
+<!-- ABOUT PAGE -->
+<section class="about-page">
+
+  <!-- INTRO -->
+  <div class="about-intro">
+    <h1>Welcome to CineTracker!</h1>
+    <p>This website helps you track, review, and anticipate movies and TV shows. Keep your personal watchlist updated, see what's coming next, and rate your favorites.</p>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features-section">
+    <h2>Features at a Glance</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Interactive Gallery</h3>
+        <p>Hover over movie posters to see genres and ratings. Click to watch trailers of the top 10 picks.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Personalised Watchlist</h3>
+        <p>Add movies and shows to your watchlist, mark progress, and track what you've seen or loved.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Ratings & Reviews</h3>
+        <p>Give your ratings and reviews as you watch movies or TV shows, and see overall scores from the community.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Most Anticipated 2026</h3>
+        <p>Discover upcoming releases for 2026 and add them directly to your watchlist with one click.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Progress Tracker</h3>
+        <p>Track how far you are into movies or series, and write mini-reviews as you watch.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-interactive">
+      <h3></h3>
+      <p></p>
+      <div class="team-dots">
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 </body>
 </html>

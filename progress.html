@@ -1,79 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Progress</title>
-
-    <link rel="stylesheet" href="progress.css">
-    <link rel="stylesheet" href="login.css">
-    <script src="login.js" defer></script>
+<meta charset="UTF-8">
+<title>Progress Page</title>
+<link rel="stylesheet" href="progress.css">
+<script src="progress.js" defer></script>
 </head>
-
 <body>
 
-<header class="header">
-    <h1 class="title">Your Movie Progress</h1>
-    <p class="subtitle">Track how many films you’ve watched this year.</p>
-</header>
-
-<section class="stats">
-
-    <div class="stat-card">
-        <h3 class="stat-number">34</h3>
-        <p class="stat-label">Movies Watched</p>
-    </div>
-
-    <a href="watchlist.html" class="stat-card clickable">
-        <h3 class="stat-number">12</h3>
-        <p class="stat-label">Movies Liked</p>
-    </a>
-
-</section>
-
-
-
-<section class="progress-bars">
-
-    <div class="bar-group">
-        <p class="bar-title">2026 Watch Goal</p>
-        <div class="bar-outline">
-            <div class="bar-fill" style="width: 45%;"></div>
-        </div>
-    </div>
-
-    <div class="bar-group">
-        <p class="bar-title">Genres Explored</p>
-        <div class="bar-outline">
-            <div class="bar-fill" style="width: 70%;"></div>
-        </div>
-    </div>
-
-</section>
-
-<div id="loginModal" class="login">
-    <div class="login-content">
-        <span class="close" onclick="closeLogin()">&times;</span>
-
-        <h2>Welcome Back!</h2>
-
-        <form class="login-form">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email">
-
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password">
-
-            <button class="main-btn">Sign In</button>
-
-            <p>
-                Don't have an account?
-                <a href="../signup/signup.html" class="link">Sign Up</a>
-            </p>
-        </form>
-    </div>
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-modal">
+    <button class="close-auth" id="closeAuth">&times;</button>
+    <h1>Welcome Back!</h1>
+    <p>Sign in to continue tracking your movies.</p>
+    <input type="email" placeholder="Email address" required>
+    <input type="password" placeholder="Password" required>
+    <button class="btn-login">Log In</button>
+    <p class="auth-footer">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </p>
+  </div>
 </div>
 
+<section class="progress-page">
+  <h1>Update Your Progress</h1>
+  <p>Track how far you've gotten in your movies or shows, write reviews, and share with friends!</p>
+
+  <!-- Watched Counter -->
+  <div class="watched-counter">
+    <h3>Watched in 2025:</h3>
+    <p>Movies: <span id="moviesWatched">0</span> | Shows: <span id="showsWatched">0</span></p>
+  </div>
+
+  <div class="progress-grid">
+
+    <!-- Card 1 -->
+    <div class="progress-card">
+      <img src="images/gossip-girl.jpg" alt="Gossip Girl">
+      <h2>Gossip Girl</h2>
+      <p>TV, 2021</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" data-value="0"></div>
+      </div>
+      <input type="range" min="0" max="100" value="0" class="progress-slider">
+      <span class="progress-percentage">0%</span>
+
+      <textarea placeholder="Write your review here..."></textarea>
+      <button class="btn-send">Send</button>
+
+      <div class="recent-reviews">
+        <h3>Recent Reviews</h3>
+        <ul></ul>
+      </div>
+
+      <div class="share-section">
+        <h4>Share with friends:</h4>
+        <div class="share-icons">
+          <span class="share-icon">🐦</span>
+          <span class="share-icon">📘</span>
+          <span class="share-icon">✉️</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="progress-card">
+      <img src="images/the-office.jpg" alt="The Office">
+      <h2>The Office</h2>
+      <p>TV, 2005</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" data-value="0"></div>
+      </div>
+      <input type="range" min="0" max="100" value="0" class="progress-slider">
+      <span class="progress-percentage">0%</span>
+
+      <textarea placeholder="Write your review here..."></textarea>
+      <button class="btn-send">Send</button>
+
+      <div class="recent-reviews">
+        <h3>Recent Reviews</h3>
+        <ul></ul>
+      </div>
+
+      <div class="share-section">
+        <h4>Share with friends:</h4>
+        <div class="share-icons">
+          <span class="share-icon">🐦</span>
+          <span class="share-icon">📘</span>
+          <span class="share-icon">✉️</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="progress-card">
+      <img src="images/die-hard.jpg" alt="Die Hard">
+      <h2>Die Hard</h2>
+      <p>Movie, 1988</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" data-value="0"></div>
+      </div>
+      <input type="range" min="0" max="100" value="0" class="progress-slider">
+      <span class="progress-percentage">0%</span>
+
+      <textarea placeholder="Write your review here..."></textarea>
+      <button class="btn-send">Send</button>
+
+      <div class="recent-reviews">
+        <h3>Recent Reviews</h3>
+        <ul></ul>
+      </div>
+
+      <div class="share-section">
+        <h4>Share with friends:</h4>
+        <div class="share-icons">
+          <span class="share-icon">🐦</span>
+          <span class="share-icon">📘</span>
+          <span class="share-icon">✉️</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOARD / NEXT SECTION -->
+  <section class="board-section">
+    <h2>All Set?</h2>
+    <p>Check out your <a href="watchlist.html">Watchlist</a> to continue tracking your movies and shows!</p>
+    <a href="watchlist.html" class="btn-watchlist">Go to Watchlist</a>
+  </section>
+
+</section>
 
 </body>
 </html>

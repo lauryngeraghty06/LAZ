@@ -1,106 +1,69 @@
-:root {
-    --red: #6B0F1A;
-    --pink: #A87D8B;
-    --dark: #040234;
-    --light: #EEF1EF;
-    --brown: #301501;
-    --radius: 12px;
-}
-
-/* PAGE BASE */
+/* GLOBAL STYLES */
 body {
-    background: var(--light);
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    color: var(--brown);
-}
-
-.page-title {
-    font-family: 'Northlima', serif;
-    font-size: 60px;
-}
-
-.heading {
-    font-family: 'Northlima', serif;
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-.text, p, li {
-    font-size: 36px;
-}
-
-/* HERO */
-.hero {
-    background: var(--pink);
-    padding: 120px 40px;
-    text-align: center;
-    border-radius: 0 0 var(--radius) var(--radius);
-}
-
-.subtitle {
-    margin-top: 20px;
-}
-
-/* SECTIONS */
-.section {
-    width: 70%;
-    margin: 120px auto;
-}
-
-/* TEAM GRID */
-.team-section {
-    margin: 120px auto;
-    text-align: center;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    padding: 0;
+    background-color: #EEF1EF;
+    color: #301501;
+  }
+  
+  /* LOGIN MODAL */
+  .auth-overlay {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .auth-modal {
+    background-color: #6B0F1A;
+    padding: 40px; border-radius: 15px; width: 400px; max-width: 90%; text-align: center; position: relative;
+  }
+  .auth-modal h1 { color: #EEF1EF; margin-bottom: 15px; }
+  .auth-modal p { color: #A87D8B; margin-bottom: 20px; }
+  .auth-modal input { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none; font-size: 16px; }
+  .auth-modal .btn-login { width: 100%; padding: 12px; border: none; border-radius: 8px; background-color: #040234; color: #EEF1EF; font-size: 18px; cursor: pointer; }
+  .auth-modal .btn-login:hover { background-color: #301501; }
+  .auth-modal .auth-footer a { color: #EEF1EF; text-decoration: underline; }
+  .auth-modal .close-auth { position: absolute; top: 10px; right: 15px; background: none; border: none; color: #EEF1EF; font-size: 28px; cursor: pointer; }
+  
+  /* ABOUT PAGE STYLING */
+  .about-page { padding: 60px 50px; background: #A87D8B; }
+  .about-intro h1 { font-family: 'Northlima', sans-serif; font-size: 50px; color: #EEF1EF; text-align: center; margin-bottom: 20px; }
+  .about-intro p { font-size: 20px; color: #EEF1EF; text-align: center; margin-bottom: 50px; }
+  
+  /* FEATURES GRID */
+  .features-section { margin-bottom: 60px; text-align: center; }
+  .features-section h2 { font-size: 36px; color: #301501; margin-bottom: 30px; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 20px; }
+  .feature-card { background-color: #6B0F1A; color: #EEF1EF; padding: 20px; border-radius: 12px; transition: transform 0.3s; }
+  .feature-card:hover { transform: translateY(-5px); }
+  
+  /* TEAM INTERACTIVE */
+  .team-section { text-align: center; }
+  .team-section h2 { font-size: 36px; margin-bottom: 30px; color: #040234; }
+  .team-interactive {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #301501;
+    border-radius: 12px;
+    color: #EEF1EF;
     padding: 40px;
-}
-
-.team-card {
-    background: white;
-    padding: 30px;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.pfp {
-    width: 140px;
-    height: 140px;
-    background: var(--pink);
-    border-radius: 50%;
-    margin: auto;
-}
-
-.name {
-    margin-top: 20px;
-    font-size: 36px;
-}
-
-.role {
-    font-size: 30px;
-    color: var(--pink);
-}
-
-/* LIST */
-.list li {
-    margin-bottom: 20px;
-}
-
-/* BUTTONS */
-.main-btn {
-    padding: 18px 34px;
-    background: var(--red);
-    color: white;
-    border: none;
-    border-radius: var(--radius);
-    cursor: pointer;
-}
-
-.link {
-    color: var(--red);
-}
+    text-align: center;
+  }
+  .team-interactive h3 { font-size: 32px; margin-bottom: 15px; }
+  .team-interactive p { font-size: 18px; line-height: 1.6; }
+  .team-dots { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+  .team-dot { width: 14px; height: 14px; background-color: #EEF1EF; border-radius: 50%; cursor: pointer; transition: transform 0.3s, background-color 0.3s; }
+  .team-dot.active { background-color: #A87D8B; transform: scale(1.3); }
+  
+  /* MEDIA QUERIES */
+  @media(max-width:768px){
+    .about-intro h1 { font-size: 36px; }
+    .about-intro p { font-size: 18px; }
+    .features-section h2, .team-section h2 { font-size: 28px; }
+    .team-interactive h3 { font-size: 24px; }
+  }
+  

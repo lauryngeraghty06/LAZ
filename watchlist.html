@@ -1,68 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watchlist</title>
-
-    <link rel="stylesheet" href="watchlist.css">
-    <link rel="stylesheet" href="login.css">
-    <script src="login.js" defer></script>
+<meta charset="UTF-8">
+<title>My Watchlist</title>
+<link rel="stylesheet" href="watchlist.css">
+<script src="watchlist.js" defer></script>
+<script src="login2.js" defer></script>
 </head>
-
 <body>
 
-<!-- NAV BAR (Zoe adds here) -->
-
-<header class="header">
-    <h1 class="title">Your Watchlist</h1>
-    <p class="subtitle">All your saved and liked movies in one place.</p>
-</header>
-
-<section class="grid-section">
-
-    <div class="movie-card">
-        <div class="poster"></div>
-        <h3 class="movie-title">Example Movie</h3>
-        <button class="remove-btn">Remove</button>
-    </div>
-
-    <div class="movie-card">
-        <div class="poster"></div>
-        <h3 class="movie-title">Another Film</h3>
-        <button class="remove-btn">Remove</button>
-    </div>
-
-    <div class="movie-card">
-        <div class="poster"></div>
-        <h3 class="movie-title">Film Title</h3>
-        <button class="remove-btn">Remove</button>
-    </div>
-
-</section>
-<div id="loginModal" class="login">
-    <div class="login-content">
-        <span class="close" onclick="closeLogin()">&times;</span>
-
-        <h2>Welcome Back!</h2>
-
-        <form class="login-form">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email">
-
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password">
-
-            <button class="main-btn">Sign In</button>
-
-            <p>
-                Don't have an account?
-                <a href="../signup/signup.html" class="link">Sign Up</a>
-            </p>
-        </form>
-    </div>
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-modal">
+    <button class="close-auth" id="closeAuth">&times;</button>
+    <h1>Welcome Back!</h1>
+    <p>Sign in to continue tracking your movies.</p>
+    <input type="email" placeholder="Email address" required>
+    <input type="password" placeholder="Password" required>
+    <button class="btn-login">Log In</button>
+    <p class="auth-footer">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </p>
+  </div>
 </div>
 
+<!-- WATCHLIST PAGE -->
+<section class="watchlist-page">
+  <div class="watchlist-header">
+    <h1>My Watchlist</h1>
+    <p>Everything you want to watch or rewatch — movies and TV shows already out.</p>
+  </div>
+
+  <!-- Watchlist Filters -->
+  <div class="watchlist-filters">
+    <button class="active" data-type="all">All</button>
+    <button data-type="movie">Movies</button>
+    <button data-type="tv">TV Shows</button>
+  </div>
+
+  <!-- Share Watchlist Button -->
+  <div style="text-align:center; margin-bottom:30px;">
+    <button id="shareWatchlist" class="btn-explore">Share My Watchlist</button>
+  </div>
+
+  <div class="watchlist-grid">
+    <!-- Card 1 -->
+    <div class="watchlist-card" data-type="movie">
+      <img src="images/inception.jpg" alt="Inception">
+      <h2>Inception</h2>
+      <p>Movie, 2010</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:0%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="watchlist-card" data-type="tv">
+      <img src="images/stranger-things.jpg" alt="Stranger Things">
+      <h2>Stranger Things</h2>
+      <p>TV, 2016</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:25%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="watchlist-card" data-type="movie">
+      <img src="images/interstellar.jpg" alt="Interstellar">
+      <h2>Interstellar</h2>
+      <p>Movie, 2014</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:0%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="watchlist-card" data-type="tv">
+      <img src="images/breaking-bad.jpg" alt="Breaking Bad">
+      <h2>Breaking Bad</h2>
+      <p>TV, 2008</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:60%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="watchlist-card" data-type="movie">
+      <img src="images/matrix.jpg" alt="The Matrix">
+      <h2>The Matrix</h2>
+      <p>Movie, 1999</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:0%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="watchlist-card" data-type="tv">
+      <img src="images/game-of-thrones.jpg" alt="Game of Thrones">
+      <h2>Game of Thrones</h2>
+      <p>TV, 2011</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:40%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="watchlist-card" data-type="movie">
+      <img src="images/shawshank.jpg" alt="The Shawshank Redemption">
+      <h2>The Shawshank Redemption</h2>
+      <p>Movie, 1994</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:0%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="watchlist-card" data-type="tv">
+      <img src="images/peaky-blinders.jpg" alt="Peaky Blinders">
+      <h2>Peaky Blinders</h2>
+      <p>TV, 2013</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:20%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="watchlist-card" data-type="movie">
+      <img src="images/avatar.jpg" alt="Avatar">
+      <h2>Avatar</h2>
+      <p>Movie, 2009</p>
+      <div class="progress-container">
+        <div class="progress-bar" style="width:0%;"></div>
+      </div>
+      <div class="watchlist-actions">
+        <button class="btn-like">❤️</button>
+        <button class="btn-watched">👁️</button>
+        <button class="btn-remove">🗑️</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WATCHLIST PAGE END -->
+<section class="watchlist-end">
+  <div class="watchlist-end-content">
+    <h2>Never Lose Track</h2>
+    <p>Keep your watchlist updated and make sure nothing slips past you. Mark what you’ve watched, loved, or want to see next!</p>
+    <a href="anticipated.html" class="btn-explore">Add More Titles</a>
+  </div>
+</section>
 
 </body>
 </html>

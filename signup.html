@@ -1,68 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-
-    <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="login.css">
-    <script src="login.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Sign Up | MovieZone</title>
+  <link rel="stylesheet" href="signup.css">
 </head>
+<body class="signup-page">
 
-<body>
+  <!-- SIGN-UP CARD -->
+  <div class="signup-card">
+    <div class="signup-header">
+      <span class="signup-year">JOIN</span>
+      <h1>Create your account</h1>
+      <p>Build your watchlist. Track your progress.</p>
+    </div>
 
-<header class="header">
-    <h1 class="title">Create Your CineTrack Account</h1>
-    <p class="subtitle">Join the community — track what you watch and love.</p>
-</header>
-
-<section class="form-wrapper">
-
-    <form class="signup-form">
-
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter your name">
-
-        <label>Email</label>
-        <input type="email" placeholder="Enter your email">
-
-        <label>Password</label>
-        <input type="password" placeholder="Create a password">
-
-        <button class="main-btn">Create Account</button>
-
-        <p class="bottom-text">
-            Already have an account?
-            <a onclick="openLogin()" class="link">Sign In</a>
-        </p>
+    <form>
+      <input type="text" placeholder="Username" class="signup-input" required>
+      <input type="email" placeholder="Email address" class="signup-input" required>
+      <input type="password" placeholder="Password" class="signup-input" required>
+      <button type="submit" class="signup-button">Sign Up</button>
     </form>
 
-</section>
+    <p class="signup-login-link">
+      Already have an account? <a href="#" id="signupLoginLink">Log in</a>
+    </p>
+  </div>
 
-<div id="loginModal" class="login">
-    <div class="login-content">
-        <span class="close" onclick="closeLogin()">&times;</span>
-
-        <h2>Welcome Back!</h2>
-
-        <form class="login-form">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email">
-
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password">
-
-            <button class="main-btn">Sign In</button>
-
-            <p>
-                Don't have an account?
-                <a href="../signup/signup.html" class="link">Sign Up</a>
-            </p>
-        </form>
+  <!-- LOGIN MODAL -->
+  <div class="signup-auth-overlay" id="signupAuthOverlay">
+    <div class="signup-auth-modal">
+      <button class="signup-close-auth" id="signupCloseAuth">&times;</button>
+      <h1>Welcome Back!</h1>
+      <p>Sign in to continue tracking your movies.</p>
+      <input type="email" placeholder="Email address" class="signup-input" required>
+      <input type="password" placeholder="Password" class="signup-input" required>
+      <button class="signup-button">Log In</button>
+      <p class="signup-login-link">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </p>
     </div>
-</div>
+  </div>
 
-
+  <script src="login2.js"></script>
 </body>
 </html>

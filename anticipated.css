@@ -1,59 +1,291 @@
-:root {
-    --red: #6B0F1A;
-    --pink: #A87D8B;
-    --light: #EEF1EF;
-    --brown: #301501;
-    --radius: 12px;
+/* ================= RESET & GLOBAL ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background: var(--light);
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
+    background-color: #040234;
+    color: #EEF1EF;
+    min-height: 100vh;
 }
 
-.title {
-    font-family: 'Northlima', serif;
-    font-size: 60px;
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a0f3d;
 }
 
-.subtitle {
-    font-size: 36px;
+.navbar a {
+    color: #EEF1EF;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
 }
 
-.header {
+.navbar a.active {
+    color: #FF4C4C;
+}
+
+.navbar button {
+    background-color: #FF4C4C;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: #EEF1EF;
+    cursor: pointer;
+}
+
+/* ================= HEADER ================= */
+.anticipated-header {
     text-align: center;
-    padding: 120px;
+    padding: 60px 20px 30px 20px;
 }
 
-.movies-grid {
-    width: 80%;
-    margin: auto;
+.anticipated-header h1 {
+    font-family: 'Northlima', sans-serif;
+    font-size: 48px;
+    color: #FF4C4C;
+    margin-bottom: 10px;
+}
+
+.anticipated-header p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ================= TOP FEATURED ================= */
+.top-anticipated {
+    padding: 20px;
+}
+
+.top-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF4C4C;
+    margin-bottom: 10px;
+}
+
+.top-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-grid .anticipated-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+/* ================= FILTER ================= */
+.filter-section {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.filter-section select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+/* ================= ANTICIPATED GRID ================= */
+.anticipated-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0 20px 40px 20px;
 }
 
-.movie-card {
-    background: white;
-    padding: 30px;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+.anticipated-card {
+    background-color: #A87D8B;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.poster {
+.anticipated-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(255,76,76,0.4);
+}
+
+.anticipated-card img {
     width: 100%;
-    height: 260px;
-    background: var(--pink);
-    border-radius: var(--radius);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.anticipated-card h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.anticipated-card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.release-date {
+    font-style: italic;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.btn-watchlist {
+    background-color: #040234;
+    color: #EEF1EF;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-watchlist:hover {
+    transform: scale(1.05);
+    background-color: #FF4C4C;
+}
+
+/* ================= GO TO WATCHLIST ================= */
+.go-watchlist {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.btn-explore {
+    background-color: #6B0F1A;
+    color: #EEF1EF;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-explore:hover {
+    transform: scale(1.05);
+    background-color: #FF4C4C;
+}
+
+.go-watchlist {
+    text-align: center;
+    margin: 60px 20px;
+    background-color: #040234;
+    padding: 40px 20px;
+    border-radius: 12px;
+    color: #EEF1EF;
+}
+
+.go-watchlist p {
+    font-size: 18px;
     margin-bottom: 20px;
+    color: #EEF1EF;
 }
 
-.movie-title {
-    font-size: 36px;
+.go-watchlist .btn-explore {
+    background-color: #6B0F1A;
+    color: #EEF1EF;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.text {
-    font-size: 32px;
-    margin-top: 10px;
+.go-watchlist .btn-explore:hover {
+    transform: scale(1.05);
+    background-color: #FF4C4C;
 }
+
+
+/* ================= MEDIA QUERIES ================= */
+@media(max-width:768px){
+    .top-grid { flex-direction: column; align-items: center; }
+    .anticipated-grid { grid-template-columns: 1fr; }
+}
+
+  
+/* ================= LOGIN MODAL ================= */
+.auth-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none; /* hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .auth-modal {
+    background-color: #6B0F1A; /* red/mauve theme */
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+  }
+  
+  .auth-modal h1 {
+    color: #EEF1EF;
+    font-family: 'Northlima', sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  .auth-modal p {
+    color: #A87D8B;
+    margin-bottom: 20px;
+  }
+  
+  .auth-modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .auth-modal .btn-login {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #040234; /* navy accent */
+    color: #EEF1EF;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .auth-modal .btn-login:hover {
+    background-color: #301501; /* mauve-dark hover */
+  }
+  
+  .auth-modal .auth-footer a {
+    color: #EEF1EF;
+    text-decoration: underline;
+  }
+  
+  .auth-modal .close-auth {
+    position: absolute;
+    top: 10px; right: 15px;
+    background: none;
+    border: none;
+    color: #EEF1EF;
+    font-size: 28px;
+    cursor: pointer;
+  }
