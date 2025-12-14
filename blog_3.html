@@ -7,6 +7,57 @@
     <link rel="stylesheet" href="blog.css">
 </head>
 <body>
+    <!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-wrapper">
+    
+        <!-- HAMBURGER (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <div class="logo">CineTracker</div>
+        <!-- MAIN LINKS -->
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="dropdown">
+                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+                <ul class="dropdown-menu">
+                    <li><a href="christmas.html">Christmas</a></li>
+                    <li><a href="top10.html">Top 10</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="progress.html">Continue Watching</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+         <!-- LOGIN BUTTON (mobile inside menu) -->
+            <li class="mobile-login">
+              <button class="nav-login-btn" onclick="openLogin()">Login</button>
+            </li>
+        </ul>
+
+        <!-- LOGIN BUTTON (desktop only) -->
+        <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
+        </div>
+        </nav>
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("open");
+}
+
+function toggleDropdown(event) {
+    // prevents navigating away
+    event.preventDefault();  
+    event.target.parentElement.classList.toggle("open-dropdown");
+}
+</script>
+<!--NAVBAR ENDING-->
 <section>
     <div class="container1">
         <img src="stranger_things_poster.webp" class = "blog-img" alt="stranger Things Season 5 Poster">
@@ -46,6 +97,55 @@
         </div>
 </div>
 </section>
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-col">
+      <h3>CineTracker</h3>
+      <p>Your place to discover, review, and track movies you love.</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Discover -->
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="christmas.html">Christmas</a></li>
+        <li><a href="top10.html">Top 10</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="ratings.html">Ratings</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="watchlist.html">Watchlist</a></li>
+        <li><a href="progress.html">Continue Watching</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#" onclick="openLogin()">Log In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 CineTracker. All rights reserved.</p>
+  </div>
+</footer>
  </body>
  </html>
+
     
