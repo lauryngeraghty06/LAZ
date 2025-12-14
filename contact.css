@@ -1,5 +1,12 @@
 
 /*START*/
+:root{
+    --bodyBg: #eef1ef;
+    --fromBg: #dfdfdf;
+    --textColor:#301501;
+    --primaryColor:#a87d8b;
+    --paraColor: #301501;
+}
 section{
     display: flex;
     flex-direction: column;
@@ -131,3 +138,4 @@ form{
         justify-content: space-between;
     }
 }
+
