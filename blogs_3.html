@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, ">
+    <title>Blogs - Stranger Things Cast Age Controversy: Too Young or Just Right? </title>
+    <link rel="stylesheet" href="blogs.css">
+    <link rel="stylesheet" href="zoestyles.css">
+    <script src="login2.js" defer></script>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-wrapper">
+    
+        <!-- HAMBURGER (mobile only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <div class="logo">CineTracker</div>
+        <!-- MAIN LINKS -->
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="dropdown">
+                <a href="reviews.html" onclick="toggleDropdown(event)">Discover</a>
+                <ul class="dropdown-menu">
+                    <li><a href="christmas.html">Christmas</a></li>
+                    <li><a href="top10.html">Top 10</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="progress.html">Continue Watching</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+         <!-- LOGIN BUTTON (mobile inside menu) -->
+            <li class="mobile-login">
+              <button class="loginbtn">Login</button>
+            </li>
+        </ul>
+
+        <!-- LOGIN BUTTON (desktop only) -->
+        <button class="loginbtn desktop-login">Login</button>
+        </div>
+        </nav>
+<script>
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("open");
+}
+
+function toggleDropdown(event) {
+    // prevents navigating away
+    event.preventDefault();  
+    event.target.parentElement.classList.toggle("open-dropdown");
+}
+</script>
+<!--NAVBAR ENDING-->
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="close-auth" id="closeAuth">&times;</button>
+  
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue tracking your movies.</p>
+  
+      <input type="email" placeholder="Email address">
+      <input type="password" placeholder="Password">
+  
+      <button class="btn-login">Log In</button>
+  
+      <p class="auth-footer">
+        Don’t have an account?
+        <a href="signup.html">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+<section>
+    <div class="container1">
+        <img src="images/stranger_things_poster.webp" class = "blog-img" alt="stranger Things Season 5 Poster">
+    </div>
+
+
+    <div class="container2">
+    <p class="title">Stranger Things Cast Age Controversy: Too Young or Just Right?</p>
+    <p class="release">3:05am, November 27, 2025</p>
+            <p>Since its debut, <em>Stranger Things</em> has been defined by its young cast—kids who quickly grew into global stars. But as the seasons progressed and production gaps stretched longer, a new debate emerged: <strong>Are the actors now too old to convincingly play teens?</strong></p>
+
+            <p>Many main cast members—Millie Bobby Brown, Finn Wolfhard, Caleb McLaughlin, and others—are now in their 20s while still portraying characters several years younger. For some viewers, this creates a visual disconnect. Others argue that the cast’s maturity enhances their performances, allowing the show to explore darker themes responsibly.</p>
+
+            <p>Regardless of the discourse, the cast’s chemistry and emotional depth remain central to the show’s success. As <em>Stranger Things</em> approaches its final season, the debate continues—but it’s clear that age hasn’t diminished the impact these actors have made on one of the decade’s most iconic series.</p>
+         <p class="author">Written by: Amelia Keating</p>
+        </div>
+</section>
+<section>
+<p class="heading"> See our recent Blogs</p>
+<div class="card-container">
+        <div class="blog-card">
+            <img src="images/dvd-gif.gif" alt="DVD">
+            <h3>The Fall of Ownership: Who owns DVDs anymore? </h3>
+            <a href="blog_1.html" class="blog-link">Click here for more</a>
+        </div>
+
+        <div class="blog-card">
+            <img src="images/severence-s2.webp" alt="Severence Cliffhanger">
+            <h3>Severence Season 2: What happened in the writers room?</h3>
+            <a href="blog_2.html" class="blog-link">Click here for more</a>
+        </div>
+
+        <div class="blog-card">
+            <img src="images/stranger_things_poster.webp" alt="Stranger Things Cast">
+            <h3>Stranger Things Cast Age Controversy: Too Young or Just Right?</h3>
+            <a href="blog_3.html" class="blog-link">Click here for more</a>
+        </div>
+</div>
+</section>
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-col">
+      <h3>CineTracker</h3>
+      <p>Your place to discover, review, and track movies you love.</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Discover -->
+    <div class="footer-col">
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="christmas.html">Christmas</a></li>
+        <li><a href="top10.html">Top 10</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="watchlist.html">Watchlist</a></li>
+        <li><a href="progress.html">Continue Watching</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#" class="loginbtn">Log In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 CineTracker. All rights reserved.</p>
+  </div>
+</footer>
+ </body>
+ </html>
+
+    
+
+
+
+
+
