@@ -1,21 +1,23 @@
-console.log("JS linked!");
+console.log("JS linked");
 
+// ELEMENTS
 const stars = document.querySelectorAll(".stars i");
+const submitBtn = document.getElementById("submitBtn");
+const popup = document.getElementById("popup");
+
 let selectedRating = 0;
 
+// STAR SYSTEM
 stars.forEach((star, index) => {
 
-  // Hover fill
   star.addEventListener("mouseover", () => {
     fillStars(index);
   });
 
-  // Restore selection
   star.addEventListener("mouseleave", () => {
     fillStars(selectedRating - 1);
   });
 
-  // Click to lock
   star.addEventListener("click", () => {
     selectedRating = index + 1;
     fillStars(index);
@@ -36,14 +38,9 @@ function fillStars(index) {
 
 // SUBMIT
 submitBtn.addEventListener("click", () => {
-  if (selectedRating === -1) {
+  if (selectedRating === 0) {
     alert("Please select a rating ⭐");
     return;
   }
   popup.style.display = "flex";
 });
-
-// CLOSE POPUP
-function closePop() {
-  popup.style.display = "none";
-}
