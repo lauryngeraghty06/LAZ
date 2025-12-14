@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs - The Fall of Ownership: Who Owns DVDs Anymore?</title>
     <link rel="stylesheet" href="blog.css">
-</head>
+    <script src="login2.js" defer></script>
 <body>
     <!-- NAVBAR -->
 <nav class="nav">
@@ -38,13 +38,12 @@
 
          <!-- LOGIN BUTTON (mobile inside menu) -->
             <li class="mobile-login">
-              <button class="nav-login-btn" onclick="openLogin()">Login</button>
+              <button class="loginbtn">Login</button>            
             </li>
         </ul>
 
         <!-- LOGIN BUTTON (desktop only) -->
-        <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
-        </div>
+        <button class="loginbtn desktop-login">Login</button>   
         </nav>
 <script>
 function toggleMenu() {
@@ -138,7 +137,7 @@ function toggleDropdown(event) {
     <div class="footer-col">
       <h4>Account</h4>
       <ul>
-        <li><a href="#" onclick="openLogin()">Log In</a></li>
+        <li><a href="#" class="loginbtn">Log In</a>/li>
         <li><a href="signup.html">Sign Up</a></li>
       </ul>
     </div>
@@ -151,4 +150,5 @@ function toggleDropdown(event) {
 </footer>
 </body>
 </html>
+
 
