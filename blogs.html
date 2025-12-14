@@ -6,6 +6,7 @@
     <title>Blogs - Cinema</title>
     <link rel="stylesheet" href="bento.css">
     <link rel="stylesheet" href="zoestyles.css">
+    <script src="login2.js" defer></script>
 </head>
 
 <body>
@@ -40,12 +41,12 @@
 
          <!-- LOGIN BUTTON (mobile inside menu) -->
             <li class="mobile-login">
-              <button class="nav-login-btn" onclick="openLogin()">Login</button>
+              <button class="loginbtn">Login</button>
             </li>
         </ul>
 
         <!-- LOGIN BUTTON (desktop only) -->
-        <button class="nav-login-btn desktop-login" onclick="openLogin()">Login</button>
+        <button class="loginbtn desktop-login">Login</button>
         </div>
         </nav>
 <script>
@@ -60,7 +61,27 @@ function toggleDropdown(event) {
 }
 </script>
 <!--NAVBAR ENDING-->
-    <section class="top-image" id="top-image">
+<!-- LOGIN MODAL -->
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-modal">
+    <button class="close-auth" id="closeAuth">&times;</button>
+
+    <h1>Welcome Back</h1>
+    <p>Sign in to continue tracking your movies.</p>
+
+    <input type="email" placeholder="Email address">
+    <input type="password" placeholder="Password">
+
+    <button class="btn-login">Log In</button>
+
+    <p class="auth-footer">
+      Don’t have an account?
+      <a href="signup.html">Sign Up</a>
+    </p>
+  </div>
+</div>
+    
+<section class="top-image" id="top-image">
         <div>
             <img src="cinema.jpg" alt="Cinema" />
         </div>
@@ -236,7 +257,7 @@ document.getElementById("quote-next").addEventListener("click", showNextQuote);
     <div class="footer-col">
       <h4>Account</h4>
       <ul>
-        <li><a href="#" onclick="openLogin()">Log In</a></li>
+        <li><a href="#" class="loginbtn">Log In</a></li>
         <li><a href="signup.html">Sign Up</a></li>
       </ul>
     </div>
@@ -252,4 +273,5 @@ document.getElementById("quote-next").addEventListener("click", showNextQuote);
 </html>
 
     
+
 
